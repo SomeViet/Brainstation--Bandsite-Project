@@ -123,3 +123,47 @@
         padding-bottom: 16px;
     }
 }
+
+.footer {
+    background-color: colors.$BandSite-Black;
+    padding: 0 16px;
+    color: colors.$White;
+    display: flex;
+    flex-direction: column;
+    &__header {
+        display: flex;
+        flex-direction: column;
+        &-text {
+            padding: 24px 0 16px 0;
+            font-weight: 600;
+            font-size: 24px;
+            margin: 0;
+            line-height: 32px;
+        }
+    }
+    &__icon {
+        display: flex;
+    }
+    &__link {
+        padding: 0 32px 16px 0;
+        &-icon {
+            /* REMEMBER TO REMOVE IF NOT USING */
+        }
+    }
+    &__card {
+        &-container {
+        }
+        &-header {
+            font-weight: 600;
+            margin: 0;
+            font-size: 13px;
+            line-height: 18px;
+        }
+        &-body {
+            font-weight: 400;
+            margin: 0;
+            font-size: 13px;
+            line-height: 18px;
+        }
+    }
+}

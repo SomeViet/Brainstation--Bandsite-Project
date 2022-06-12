@@ -143,4 +143,44 @@ body {
 }
 .photo-gallary__image {
   padding-bottom: 16px;
+}
+
+.footer {
+  background-color: #323232;
+  padding: 0 16px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+.footer__header {
+  display: flex;
+  flex-direction: column;
+}
+.footer__header-text {
+  padding: 24px 0 16px 0;
+  font-weight: 600;
+  font-size: 24px;
+  margin: 0;
+  line-height: 32px;
+}
+.footer__icon {
+  display: flex;
+}
+.footer__link {
+  padding: 0 32px 16px 0;
+}
+.footer__link-icon {
+  /* REMEMBER TO REMOVE IF NOT USING */
+}
+.footer__card-header {
+  font-weight: 600;
+  margin: 0;
+  font-size: 13px;
+  line-height: 18px;
+}
+.footer__card-body {
+  font-weight: 400;
+  margin: 0;
+  font-size: 13px;
+  line-height: 18px;
 }/*# sourceMappingURL=bio.css.map */
