@@ -1,8 +1,9 @@
 @use "./partials/global";
 @use "./partials/colors";
+@use "./partials/typekit";
 
 .header-nav {
-    background-color: colors.$BandSite-Black;
+    background-color: colors.$bandsite-black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,9 +12,11 @@
         font-size: 24px;
         font-weight: 400;
         line-height: 32px;
-        color: colors.$White;
+        color: colors.$white;
+        display: flex;
+        width: 100%;
         &-item {
-            padding-top: 1rem;
+            @include global.margin-headline;
             width: 100%;
             text-align: center;
         }
@@ -28,7 +31,7 @@
     }
     &__link {
         text-decoration: none;
-        color: colors.$White;
+        color: colors.$white;
         font-size: 14px;
         font-weight: 600;
         line-height: 22px;
@@ -36,7 +39,7 @@
     }
     &__item {
         text-align: center;
-        padding: 1rem 0;
+        @include global.margin-components;
     }
 }
 
@@ -50,102 +53,82 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            background-color: colors.$BandSite-Black;
+            background-color: colors.$bandsite-black;
             opacity: 0.5;
         }
     }
     &__text {
-        color: colors.$White;
+        @include global.margin-components;
+        @include typekit.pageheader;
+        color: colors.$white;
         position: absolute;
         top: 50%;
-        left: 16px;
         transform: translate(0, -50%);
-        font-size: 24px;
-        line-height: 32px;
-        font-weight: 600;
-        margin: 0;
     }
 }
 
 .biography {
     display: flex;
     flex-direction: column;
-    padding: 0 16px;
     &__header {
-        padding: 24px 0 16px 0;
+        @include global.margin-headline;
+        @include typekit.pageheader;
         font-weight: 600;
-        font-size: 24px;
-        margin: 0;
-        line-height: 32px;
     }
     &__container {
         display: flex;
         flex-direction: column;
     }
     &__image {
+        @include global.margin-components;
         background-size: cover;
-        padding-bottom: 16px;
         &-caption {
-            font-weight: 600;
-            margin: 0;
-            padding-bottom: 16px;
+            @include global.margin-components;
+            @include typekit.subheader;
         }
     }
     &__subheader {
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 22px;
-        padding-bottom: 16px;
-        margin: 0;
+        @include global.margin-components;
+        @include typekit.subheader;
     }
     &__content {
-        font-size: 13px;
-        line-height: 18px;
-        weight: 400;
-        margin: 0;
-        padding-bottom: 16px;
+        @include global.margin-components;
+        @include typekit.bodycopy;
     }
 }
 
 .photo-gallary {
-    padding: 0 16px;
-    background-color: colors.$Alabaster;
+    background-color: colors.$alabaster;
     display: flex;
     flex-direction: column;
     &__header {
-        padding: 24px 0 16px 0;
-        font-weight: 600;
-        font-size: 24px;
-        margin: 0;
-        line-height: 32px;
+        @include global.margin-headline;
+        @include typekit.sectionheader;
     }
     &__image {
-        padding-bottom: 16px;
+        @include global.margin-components;
     }
 }
 
 .footer {
-    background-color: colors.$BandSite-Black;
-    padding: 0 16px;
-    color: colors.$White;
+    background-color: colors.$bandsite-black;
+    color: colors.$white;
     display: flex;
     flex-direction: column;
     &__header {
         display: flex;
         flex-direction: column;
         &-text {
-            padding: 24px 0 16px 0;
-            font-weight: 600;
-            font-size: 24px;
-            margin: 0;
-            line-height: 32px;
+            @include global.margin-headline;
+            @include typekit.sectionheader;
         }
     }
     &__icon {
         display: flex;
     }
     &__link {
-        padding: 0 32px 16px 0;
+        @include global.margin-components;
+        margin-bottom: 0px;
         &-icon {
             /* REMEMBER TO REMOVE IF NOT USING */
         }
@@ -154,16 +137,25 @@
         &-container {
         }
         &-header {
+            @include global.margin-headline;
+            @include typekit.footercopy;
             font-weight: 600;
-            margin: 0;
-            font-size: 13px;
-            line-height: 18px;
         }
         &-body {
-            font-weight: 400;
-            margin: 0;
-            font-size: 13px;
-            line-height: 18px;
+            @include global.margin-components;
+            @include typekit.footercopy;
         }
+    }
+    &__logo {
+        @include global.margin-headline;
+        max-width: 120px;
+        max-height: 20px;
+        font-size: 24px;
+        line-height: 32px;
+    }
+    &__copyright {
+        @include global.margin-components;
+        @include typekit.footercopy;
+        font-size: 12px;
     }
 }

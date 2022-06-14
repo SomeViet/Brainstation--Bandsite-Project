@@ -1,26 +1,34 @@
+//Font Face & Default Font
+
 @font-face {
     font-family: "Avenir";
     src: url(../assets/fonts/AvenirNextLTPro-Regular.otf) format("opentype");
     font-weight: 400;
     font-style: normal;
 }
-
 @font-face {
     font-family: "Avenir";
     src: url(../assets/fonts/AvenirNextLTPro-Demi.otf) format("opentype");
     font-weight: 600;
     font-style: normal;
 }
-
 @font-face {
     font-family: "Avenir";
     src: url(../assets/fonts/AvenirNextLTPro-Bold.otf) format("opentype");
     font-weight: 700;
     font-style: normal;
 }
-
 body {
     font-family: "Avenir";
-    weight: normal;
-    margin: 0px;
+    font-weight: 400;
+    margin: 0;
+}
+
+// Spacing
+
+@mixin margin-headline {
+    margin: 24px 16px 16px 16px;
+}
+@mixin margin-components {
+    margin: 0px 16px 16px 16px;
 }

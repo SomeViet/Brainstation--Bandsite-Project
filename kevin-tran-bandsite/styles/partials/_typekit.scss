@@ -1,0 +1,30 @@
+@mixin pageheader {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+}
+@mixin sectionheader {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+}
+@mixin subheader {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 600;
+}
+@mixin bodycopy {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+}
+@mixin footercopy {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+}
+@mixin labelbutton {
+    font-size: 10px;
+    line-height: 20px;
+    font-weight: 700;
+}
