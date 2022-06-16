@@ -2,44 +2,96 @@
 @use "./partials/colors";
 @use "./partials/typekit";
 
-.header-nav {
+.header {
     background-color: colors.$bandsite-black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    &__home {
-        text-decoration: none;
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 32px;
-        color: colors.$white;
+    &-nav {
         display: flex;
-        width: 100%;
-        &-item {
-            @include global.margin-headline;
-            width: 100%;
-            text-align: center;
+        flex-direction: column;
+        align-items: center;
+        @media (min-width: 768px) and (max-width: 1279px) {
+            flex-direction: row;
         }
-    }
-    &__list {
-        list-style: none;
-        display: flex;
-        width: 100%;
-        justify-content: space-around;
-        margin: 0;
-        padding: 0;
-    }
-    &__link {
-        text-decoration: none;
-        color: colors.$white;
-        font-size: 14px;
-        font-weight: 600;
-        line-height: 22px;
-        width: 50%;
-    }
-    &__item {
-        text-align: center;
-        @include global.margin-components;
+        @media (min-width: 1280px) {
+            flex-direction: row;
+            margin: auto;
+            width: 1060px;
+        }
+        &__home {
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 32px;
+            color: colors.$white;
+            display: flex;
+            &-item {
+                padding-top: 16px;
+                margin-bottom: 16px;
+                max-width: 120px;
+                max-height: 20px;
+                @media (min-width: 768px) and (max-width: 1279px) {
+                    align-self: center;
+                    padding: 36px 0;
+                    margin: 0 36px;
+                }
+                @media (min-width: 1280px) {
+                    align-self: center;
+                    padding: 36px 0;
+                    margin: 0 36px;
+                }
+            }
+        }
+        &__list {
+            list-style: none;
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            margin: 0;
+            padding: 0;
+            @media (min-width: 768px) {
+                width: auto;
+            }
+        }
+        &__link {
+            text-decoration: none;
+            color: colors.$mercury;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 22px;
+            width: 50%;
+        }
+        &__item {
+            @media (min-width: 768px) {
+                align-self: center;
+                padding: 36px 0 32px 0;
+                margin: 0 36px;
+                width: fit-content;
+            }
+            @media (min-width: 1279px) {
+                min-width: 68px;
+            }
+            text-align: center;
+            padding-bottom: 12px;
+            border-bottom: 4px solid transparent;
+            &--active {
+                @extend .header-nav__item;
+                border-bottom: 4px;
+                border-bottom-color: white;
+                border-bottom-style: solid;
+                color: colors.$white;
+                font-weight: 700;
+            }
+            &:hover {
+                @media (min-width: 768px) {
+                    padding-bottom: 32px;
+                }
+                border-bottom: 4px;
+                border-bottom-color: white;
+                border-bottom-style: solid;
+                padding-bottom: 12px;
+                color: colors.$white;
+                font-weight: 700;
+            }
+        }
     }
 }
 
@@ -101,6 +153,8 @@
     background-color: colors.$alabaster;
     display: flex;
     flex-direction: column;
+    &__container {
+    }
     &__header {
         @include global.margin-headline;
         @include typekit.sectionheader;
@@ -150,12 +204,20 @@
         @include global.margin-headline;
         max-width: 120px;
         max-height: 20px;
-        font-size: 24px;
-        line-height: 32px;
     }
     &__copyright {
         @include global.margin-components;
         @include typekit.footercopy;
-        font-size: 12px;
+        font-size: 11px;
     }
+}
+
+.columns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.column {
+    flex: 33.33%;
 }

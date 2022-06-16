@@ -27,8 +27,15 @@ body {
 // Spacing
 
 @mixin margin-headline {
+    @media (min-width: 768px) {
+        margin: 48px 36px 36px 36px;
+    }
     margin: 24px 16px 16px 16px;
 }
+
 @mixin margin-components {
+    @media (min-width: 768px) {
+        margin: 0px 36px 36px 36px;
+    }
     margin: 0px 16px 16px 16px;
 }

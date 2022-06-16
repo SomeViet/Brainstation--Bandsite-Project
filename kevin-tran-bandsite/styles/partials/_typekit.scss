@@ -1,29 +1,59 @@
 @mixin pageheader {
+    @media (min-width: 768px) {
+        font-size: 60px;
+        line-height: 68px;
+        font-weight: 700;
+    }
     font-size: 24px;
     line-height: 32px;
     font-weight: 700;
 }
 @mixin sectionheader {
+    @media (min-width: 768px) {
+        font-size: 36px;
+        line-height: 44px;
+        font-weight: 700;
+    }
     font-size: 24px;
     line-height: 32px;
     font-weight: 700;
 }
 @mixin subheader {
+    @media (min-width: 768px) {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 600;
+    }
     font-size: 14px;
     line-height: 22px;
     font-weight: 600;
 }
 @mixin bodycopy {
+    @media (min-width: 768px) {
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 400;
+    }
     font-size: 13px;
     line-height: 18px;
     font-weight: 400;
 }
 @mixin footercopy {
+    @media (min-width: 768px) {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+    }
     font-size: 13px;
     line-height: 18px;
     font-weight: 400;
 }
 @mixin labelbutton {
+    @media (min-width: 768px) {
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: 700;
+    }
     font-size: 10px;
     line-height: 20px;
     font-weight: 700;
