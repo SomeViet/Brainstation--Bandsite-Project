@@ -235,29 +235,31 @@
         @media (min-width: 768px) {
             display: flex;
             flex-direction: row;
-            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-around;
         }
         display: flex;
         flex-direction: column;
-        gap: 16px;
         margin-bottom: 16px;
-        div {
-            display: flex;
-        }
+        row-gap: 20%;
+        // div {
+        //     display: flex;
+        //     flex-direction: column;
+        // }
     }
     &__image {
         @media (min-width: 768px) {
             width: 100%;
-            border-radius: 5px;
             height: 100%;
             object-fit: cover;
+            margin-bottom: 2%;
         }
     }
 }
 
 .test {
-    width: 100%;
-    border-radius: 5px;
+    width: 32%;
     height: 100%;
     object-fit: cover;
 }

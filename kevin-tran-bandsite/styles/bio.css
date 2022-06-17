@@ -368,32 +368,30 @@ h3 {
 .photo-gallary__display {
   display: flex;
   flex-direction: column;
-  gap: 16px;
   margin-bottom: 16px;
+  row-gap: 20%;
 }
 @media (min-width: 768px) {
   .photo-gallary__display {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-around;
   }
-}
-.photo-gallary__display div {
-  display: flex;
 }
 @media (min-width: 768px) {
   .photo-gallary__image {
     width: 100%;
-    border-radius: 5px;
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+    margin-bottom: 2%;
   }
 }
 
 .test {
-  width: 100%;
-  border-radius: 5px;
+  width: 32%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
