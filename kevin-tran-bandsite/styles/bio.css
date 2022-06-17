@@ -138,6 +138,11 @@ body {
   display: flex;
   flex-direction: column;
 }
+.hero__image {
+  height: 70vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .hero__image-overlay {
   position: absolute;
   width: 100%;
