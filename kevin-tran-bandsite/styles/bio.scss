@@ -102,8 +102,10 @@
         flex-direction: column;
     }
     &__image {
-        height: 70vh;
-        object-fit: cover;
+        @media (min-width: 1280px) {
+            height: 65vh;
+            object-fit: cover;
+        }
         &-overlay {
             position: absolute;
             width: 100%;
@@ -132,51 +134,133 @@
         }
     }
 }
+
 .biography {
+    @media (min-width: 768px) and (max-width: 1279px) {
+        padding: 0 36px;
+    }
+    @media (min-width: 1280px) {
+        width: 1060px;
+        padding: 0;
+        margin: auto;
+    }
     display: flex;
     flex-direction: column;
+    padding: 0 16px;
     &__header {
-        @include global.margin-headline;
-        @include typekit.pageheader;
-        font-weight: 600;
+        @media (min-width: 768px) {
+            margin: 48px 0 36px 0;
+        }
+        @include typekit.sectionheader;
+        font-weight: 400;
+        margin: 24px 0 16px 0;
     }
     &__container {
+        @media (min-width: 768px) and (max-width: 1279px) {
+            padding: 0 72px;
+        }
+        @media (min-width: 1280px) {
+            padding: 0 87px;
+        }
+    }
+    &__main {
         display: flex;
         flex-direction: column;
     }
     &__image {
-        @include global.margin-components;
+        @media (min-width: 768px) {
+            margin-bottom: 36px;
+        }
+        margin-bottom: 16px;
         background-size: cover;
         &-caption {
-            @include global.margin-components;
             @include typekit.subheader;
+            @media (min-width: 768px) {
+                margin-bottom: 16px;
+            }
+            margin-bottom: 16px;
+        }
+        &-artist {
+            @include typekit.subheader;
+            @media (min-width: 768px) {
+                margin-bottom: 36px;
+                font-size: 18px;
+            }
+            margin-bottom: 16px;
         }
     }
     &__subheader {
-        @include global.margin-components;
         @include typekit.subheader;
+        margin-bottom: 16px;
+    }
+    &__card {
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 -18px;
+        }
     }
     &__content {
-        @include global.margin-components;
+        @media (min-width: 768px) {
+            margin: 0 18px 36px 18px;
+        }
         @include typekit.bodycopy;
+        margin-bottom: 16px;
     }
 }
-
+//https://codesandbox.io/s/fast-sun-357ccd?file=/index.html
 .photo-gallary {
     background-color: colors.$alabaster;
-    display: flex;
-    flex-direction: column;
     &__container {
+        @media (min-width: 768px) and (max-width: 1279px) {
+            padding: 0 36px;
+        }
+        @media (min-width: 1280px) {
+            width: 1060px;
+            padding: 0;
+            margin: auto;
+        }
+        display: flex;
+        flex-direction: column;
+        padding: 0 16px;
     }
     &__header {
-        @include global.margin-headline;
+        @media (min-width: 768px) {
+            margin: 48px 0 36px 0;
+        }
+        margin: 24px 0 16px 0px;
         @include typekit.sectionheader;
     }
+    &__display {
+        @media (min-width: 768px) {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 16px;
+        div {
+            display: flex;
+        }
+    }
     &__image {
-        @include global.margin-components;
+        @media (min-width: 768px) {
+            width: 100%;
+            border-radius: 5px;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 }
 
+.test {
+    width: 100%;
+    border-radius: 5px;
+    height: 100%;
+    object-fit: cover;
+}
 .footer {
     background-color: colors.$bandsite-black;
     color: colors.$white;
