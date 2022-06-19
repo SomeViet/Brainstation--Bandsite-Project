@@ -300,8 +300,10 @@
         }
     }
     &__icon {
+        @media (min-width: 768px) {
+            margin: 0 36px;
+        }
         display: flex;
-        margin: 0 36px;
     }
     &__link {
         @media (min-width: 768px) {
@@ -329,7 +331,8 @@
     }
     &__logo {
         @media (min-width: 768px) {
-            display: none;
+            display: block;
+            margin-left: auto;
         }
         display: none;
         &-mobile {
