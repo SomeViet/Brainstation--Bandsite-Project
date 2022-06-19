@@ -327,60 +327,61 @@ h3 {
   }
 }
 
-.photo-gallary {
+.photo-gallery {
   background-color: #fafafa;
 }
-.photo-gallary__container {
+.photo-gallery__container {
   display: flex;
   flex-direction: column;
   padding: 0 16px;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
-  .photo-gallary__container {
+  .photo-gallery__container {
     padding: 0 36px;
   }
 }
 @media (min-width: 1280px) {
-  .photo-gallary__container {
+  .photo-gallery__container {
     width: 1060px;
     padding: 0;
     margin: auto;
   }
 }
-.photo-gallary__header {
+.photo-gallery__header {
   margin: 24px 0 16px 0px;
   font-size: 24px;
   line-height: 32px;
   font-weight: 700;
 }
 @media (min-width: 768px) {
-  .photo-gallary__header {
+  .photo-gallery__header {
     margin: 48px 0 36px 0;
   }
 }
 @media (min-width: 768px) {
-  .photo-gallary__header {
+  .photo-gallery__header {
     font-size: 36px;
     line-height: 44px;
     font-weight: 700;
   }
 }
-.photo-gallary__display {
+.photo-gallery__display {
   display: flex;
   flex-direction: column;
   margin-bottom: 16px;
   row-gap: 20%;
 }
 @media (min-width: 768px) {
-  .photo-gallary__display {
+  .photo-gallery__display {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-content: space-around;
+    flex-direction: row;
+    gap: 24px;
+    margin-bottom: 36px;
   }
 }
-.photo-gallary__box {
+.photo-gallery__box {
   width: auto;
   height: 100%;
   -o-object-fit: cover;
@@ -389,23 +390,22 @@ h3 {
   margin-bottom: 16px;
 }
 @media (min-width: 768px) {
-  .photo-gallary__box {
-    min-width: 33%;
-    margin: 0 24px 24px 0;
+  .photo-gallery__box {
+    width: 31%;
+    flex-grow: 1;
+    margin: 0;
+    background-color: red;
   }
 }
-.photo-gallary__image {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+.photo-gallery__image {
+  -o-object-fit: fit;
+     object-fit: fit;
+  max-width: 100%;
 }
 @media (min-width: 768px) {
-  .photo-gallary__image {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+  .photo-gallery__image {
+    max-width: 100%;
+    max-height: 100%;
   }
 }
 
