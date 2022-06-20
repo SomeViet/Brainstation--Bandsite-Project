@@ -93,9 +93,9 @@ h3 {
   text-decoration: none;
   color: #e1e1e1;
   font-size: 14px;
-  font-weight: 600;
   line-height: 22px;
   width: 50%;
+  font-weight: 600;
 }
 .header-nav__item, .header-nav__item--active {
   text-align: center;
@@ -112,7 +112,7 @@ h3 {
     width: fit-content;
   }
 }
-@media (min-width: 1279px) {
+@media (min-width: 1280px) {
   .header-nav__item, .header-nav__item--active {
     min-width: 68px;
   }
@@ -122,7 +122,7 @@ h3 {
   border-bottom-color: white;
   border-bottom-style: solid;
   color: #ffffff;
-  font-weight: 700;
+  font-weight: 600;
 }
 .header-nav__item:hover, .header-nav__item--active:hover {
   border-bottom: 4px;
@@ -130,7 +130,7 @@ h3 {
   border-bottom-style: solid;
   padding-bottom: 12px;
   color: #ffffff;
-  font-weight: 700;
+  font-weight: 600;
 }
 @media (min-width: 768px) {
   .header-nav__item:hover, .header-nav__item--active:hover {
@@ -163,8 +163,9 @@ h3 {
 .hero__text {
   font-size: 24px;
   line-height: 32px;
-  font-weight: 700;
-  margin: 0 0 0 16px;
+  font-weight: 600;
+  color: #323232;
+  padding: 0 16px;
   color: #ffffff;
   position: absolute;
   top: 50%;
@@ -174,18 +175,23 @@ h3 {
   .hero__text {
     font-size: 60px;
     line-height: 68px;
-    font-weight: 700;
+    font-weight: 600;
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .hero__text {
-    margin-left: 36px;
+    padding: 0 36px;
   }
 }
 @media (min-width: 1280px) {
   .hero__text {
-    margin-left: 0;
+    padding: 0;
     width: 1060px;
+    margin: auto;
+  }
+}
+@media (min-width: 1280px) {
+  .hero__text {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -193,9 +199,9 @@ h3 {
 }
 
 .biography {
+  padding: 0 16px;
   display: flex;
   flex-direction: column;
-  padding: 0 16px;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .biography {
@@ -204,16 +210,16 @@ h3 {
 }
 @media (min-width: 1280px) {
   .biography {
-    width: 1060px;
     padding: 0;
+    width: 1060px;
     margin: auto;
   }
 }
 .biography__header {
   font-size: 24px;
   line-height: 32px;
-  font-weight: 700;
-  font-weight: 400;
+  font-weight: 600;
+  color: #323232;
   margin: 24px 0 16px 0;
 }
 @media (min-width: 768px) {
@@ -225,7 +231,7 @@ h3 {
   .biography__header {
     font-size: 36px;
     line-height: 44px;
-    font-weight: 700;
+    font-weight: 600;
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
@@ -255,6 +261,7 @@ h3 {
   font-size: 14px;
   line-height: 22px;
   font-weight: 600;
+  color: #323232;
   margin-bottom: 16px;
 }
 @media (min-width: 768px) {
@@ -273,6 +280,7 @@ h3 {
   font-size: 14px;
   line-height: 22px;
   font-weight: 600;
+  color: #323232;
   margin-bottom: 16px;
 }
 @media (min-width: 768px) {
@@ -292,6 +300,7 @@ h3 {
   font-size: 14px;
   line-height: 22px;
   font-weight: 600;
+  color: #323232;
   margin-bottom: 16px;
 }
 @media (min-width: 768px) {
@@ -312,6 +321,7 @@ h3 {
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
+  color: #323232;
   margin-bottom: 16px;
 }
 @media (min-width: 768px) {
@@ -331,9 +341,9 @@ h3 {
   background-color: #fafafa;
 }
 .photo-gallery__container {
+  padding: 0 16px;
   display: flex;
   flex-direction: column;
-  padding: 0 16px;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .photo-gallery__container {
@@ -342,8 +352,8 @@ h3 {
 }
 @media (min-width: 1280px) {
   .photo-gallery__container {
-    width: 1060px;
     padding: 0;
+    width: 1060px;
     margin: auto;
   }
 }
@@ -351,7 +361,8 @@ h3 {
   margin: 24px 0 16px 0px;
   font-size: 24px;
   line-height: 32px;
-  font-weight: 700;
+  font-weight: 600;
+  color: #323232;
 }
 @media (min-width: 768px) {
   .photo-gallery__header {
@@ -362,7 +373,7 @@ h3 {
   .photo-gallery__header {
     font-size: 36px;
     line-height: 44px;
-    font-weight: 700;
+    font-weight: 600;
   }
 }
 .photo-gallery__display {
@@ -413,10 +424,10 @@ h3 {
   background-color: #323232;
 }
 .footer__container {
+  padding: 0 16px;
   color: #ffffff;
   display: flex;
   flex-direction: column;
-  padding: 0 16px;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .footer__container {
@@ -425,8 +436,8 @@ h3 {
 }
 @media (min-width: 1280px) {
   .footer__container {
-    width: 1060px;
     padding: 0;
+    width: 1060px;
     margin: auto;
   }
 }
@@ -450,15 +461,10 @@ h3 {
 .footer__header-text {
   font-size: 24px;
   line-height: 32px;
-  font-weight: 700;
+  font-weight: 600;
+  color: #323232;
+  color: #ffffff;
   margin: 24px 0 16px 0;
-}
-@media (min-width: 768px) {
-  .footer__header-text {
-    font-size: 36px;
-    line-height: 44px;
-    font-weight: 700;
-  }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .footer__header-text {
@@ -472,6 +478,13 @@ h3 {
   .footer__header-text {
     margin: 48px 36px 0 0;
     min-width: 237px;
+  }
+}
+@media (min-width: 768px) {
+  .footer__header-text {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 600;
   }
 }
 .footer__icon {
@@ -527,6 +540,7 @@ h3 {
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
+  color: #ffffff;
   font-weight: 600;
   margin: 24px 0 16px 0;
 }
@@ -546,6 +560,7 @@ h3 {
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
+  color: #ffffff;
   margin-bottom: 16px;
 }
 @media (min-width: 768px) {
@@ -569,10 +584,11 @@ h3 {
     justify-content: flex-end;
     flex-grow: 1;
     flex-basis: 0;
+    line-height: 32px;
   }
 }
 .footer__logo-mobile {
-  margin: 24px 16px 16px 16px;
+  margin: 24px 0 16px 0;
   max-width: 120px;
   max-height: 20px;
 }
@@ -585,6 +601,7 @@ h3 {
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
+  color: #ffffff;
   font-size: 11px;
   margin-bottom: 16px;
 }
