@@ -285,7 +285,12 @@
         padding: 0 16px;
     }
     &__header {
-        @media (min-width: 768px) {
+        @media (min-width: 768px) and (max-width: 1279px) {
+            flex-direction: row;
+            align-items: flex-end;
+            gap: 36px;
+        }
+        @media (min-width: 1280px) {
             flex-direction: row;
             align-items: flex-end;
         }
@@ -296,7 +301,10 @@
             @include typekit.sectionheader;
             margin: 24px 0 16px 0;
             @media (min-width: 768px) and (max-width: 1279px) {
-                margin: 48px 36px 0 0;
+                margin: 48px 0 0 0;
+                flex-grow: 1;
+                flex-basis: 0;
+                font-weight: 600;
             }
             @media (min-width: 1280px) {
                 margin: 48px 36px 0 0;
@@ -306,7 +314,8 @@
     }
     &__icon {
         @media (min-width: 768px) {
-            margin-right: 36px;
+            flex-grow: 1;
+            flex-basis: 0;
         }
         display: flex;
     }
@@ -322,15 +331,19 @@
         }
     }
     &__card {
-        @media (min-width: 768px) {
+        @media (min-width: 768px) and (max-width: 1279px) {
             flex-direction: row;
-            flex-grow: 1;
+            gap: 36px;
+        }
+        @media (min-width: 1280px) {
+            flex-direction: row;
         }
         display: flex;
         flex-direction: column;
         &-container {
             @media (min-width: 760px) and (max-width: 1279px) {
-                margin-right: 36px;
+                flex-grow: 1;
+                flex-basis: 0;
             }
             @media (min-width: 1280px) {
                 min-width: 237px;
@@ -355,8 +368,10 @@
     }
     &__logo {
         @media (min-width: 768px) {
-            display: block;
-            margin-left: auto;
+            display: flex;
+            justify-content: flex-end;
+            flex-grow: 1;
+            flex-basis: 0;
         }
         display: none;
         &-mobile {
