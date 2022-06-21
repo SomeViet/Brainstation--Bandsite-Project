@@ -47,33 +47,33 @@ h3 {
   .header-nav {
     flex-direction: row;
     margin: auto;
-    width: 1060px;
+    width: 66.25rem;
   }
 }
 .header-nav__home {
   text-decoration: none;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 400;
-  line-height: 32px;
+  line-height: 2rem;
   color: #ffffff;
   display: flex;
 }
 .header-nav__home-item {
-  padding-top: 16px;
-  margin-bottom: 16px;
-  max-width: 120px;
-  max-height: 20px;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+  max-width: 7.5rem;
+  max-height: 1.25rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .header-nav__home-item {
     align-self: center;
-    padding: 36px 0;
-    margin: 0 36px;
+    padding: 2.25rem 0;
+    margin: 0 2.25rem;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 80rem) {
   .header-nav__home-item {
-    margin-left: 0px;
+    margin-left: 0;
   }
 }
 .header-nav__list {
@@ -84,7 +84,7 @@ h3 {
   margin: 0;
   padding: 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .header-nav__list {
     width: auto;
   }
@@ -92,21 +92,21 @@ h3 {
 .header-nav__link {
   text-decoration: none;
   color: #e1e1e1;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   width: 50%;
   font-weight: 600;
 }
 .header-nav__item, .header-nav__item--active {
   text-align: center;
-  padding-bottom: 12px;
-  border-bottom: 4px solid transparent;
+  padding-bottom: 0.75rem;
+  border-bottom: 0.25rem solid transparent;
 }
 @media (min-width: 768px) {
   .header-nav__item, .header-nav__item--active {
     align-self: center;
-    padding: 36px 0 32px 0;
-    margin: 0 36px;
+    padding: 2.25rem 0 2rem 0;
+    margin: 0 2.25rem;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -114,27 +114,27 @@ h3 {
 }
 @media (min-width: 1280px) {
   .header-nav__item, .header-nav__item--active {
-    min-width: 68px;
+    min-width: 4.25rem;
   }
 }
 .header-nav__item--active {
-  border-bottom: 4px;
+  border-bottom: 0.25rem;
   border-bottom-color: white;
   border-bottom-style: solid;
   color: #ffffff;
   font-weight: 600;
 }
 .header-nav__item:hover, .header-nav__item--active:hover {
-  border-bottom: 4px;
+  border-bottom: 0.25rem;
   border-bottom-color: white;
   border-bottom-style: solid;
-  padding-bottom: 12px;
+  padding-bottom: 0.75rem;
   color: #ffffff;
   font-weight: 600;
 }
 @media (min-width: 768px) {
   .header-nav__item:hover, .header-nav__item--active:hover {
-    padding-bottom: 32px;
+    padding-bottom: 2rem;
   }
 }
 
@@ -165,7 +165,7 @@ h3 {
   line-height: 32px;
   font-weight: 600;
   color: #323232;
-  padding: 0 16px;
+  padding: 0 1rem;
   color: #ffffff;
   position: absolute;
   top: 50%;
@@ -180,13 +180,13 @@ h3 {
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .hero__text {
-    padding: 0 36px;
+    padding: 0 2.25rem;
   }
 }
 @media (min-width: 1280px) {
   .hero__text {
     padding: 0;
-    width: 1060px;
+    width: 66.25rem;
     margin: auto;
   }
 }
@@ -199,19 +199,19 @@ h3 {
 }
 
 .biography {
-  padding: 0 16px;
+  padding: 0 1rem;
   display: flex;
   flex-direction: column;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .biography {
-    padding: 0 36px;
+    padding: 0 2.25rem;
   }
 }
 @media (min-width: 1280px) {
   .biography {
     padding: 0;
-    width: 1060px;
+    width: 66.25rem;
     margin: auto;
   }
 }
@@ -220,11 +220,11 @@ h3 {
   line-height: 32px;
   font-weight: 600;
   color: #323232;
-  margin: 24px 0 16px 0;
+  margin: 2.25rem 0 1rem 0;
 }
 @media (min-width: 768px) {
   .biography__header {
-    margin: 48px 0 36px 0;
+    margin: 3rem 0 2.25rem 0;
   }
 }
 @media (min-width: 768px) {
@@ -236,12 +236,12 @@ h3 {
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .biography__container {
-    padding: 0 72px;
+    padding: 0 4.5rem;
   }
 }
 @media (min-width: 1280px) {
   .biography__container {
-    padding: 0 87px;
+    padding: 0 5.4375rem;
   }
 }
 .biography__main {
@@ -249,12 +249,12 @@ h3 {
   flex-direction: column;
 }
 .biography__image {
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
   background-size: cover;
 }
 @media (min-width: 768px) {
   .biography__image {
-    margin-bottom: 36px;
+    margin-bottom: 2.25rem;
   }
 }
 .biography__image-caption {
@@ -262,7 +262,8 @@ h3 {
   line-height: 22px;
   font-weight: 600;
   color: #323232;
-  margin-bottom: 16px;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .biography__image-caption {
@@ -273,7 +274,8 @@ h3 {
 }
 @media (min-width: 768px) {
   .biography__image-caption {
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
+    font-weight: 700;
   }
 }
 .biography__image-artist {
@@ -281,7 +283,8 @@ h3 {
   line-height: 22px;
   font-weight: 600;
   color: #323232;
-  margin-bottom: 16px;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .biography__image-artist {
@@ -292,8 +295,8 @@ h3 {
 }
 @media (min-width: 768px) {
   .biography__image-artist {
-    margin-bottom: 36px;
-    font-size: 18px;
+    margin-bottom: 2.25rem;
+    font-size: 1.125rem;
   }
 }
 .biography__subheader {
@@ -301,7 +304,7 @@ h3 {
   line-height: 22px;
   font-weight: 600;
   color: #323232;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .biography__subheader {
@@ -314,7 +317,7 @@ h3 {
   .biography__card {
     display: flex;
     justify-content: space-between;
-    margin: 0 -18px;
+    margin: 0 -1.125rem;
   }
 }
 .biography__content {
@@ -322,11 +325,11 @@ h3 {
   line-height: 18px;
   font-weight: 400;
   color: #323232;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .biography__content {
-    margin: 0 18px 36px 18px;
+    margin: 0 1.125rem 2.25rem 1.125rem;
   }
 }
 @media (min-width: 768px) {
@@ -341,24 +344,24 @@ h3 {
   background-color: #fafafa;
 }
 .photo-gallery__container {
-  padding: 0 16px;
+  padding: 0 1rem;
   display: flex;
   flex-direction: column;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .photo-gallery__container {
-    padding: 0 36px;
+    padding: 0 2.25rem;
   }
 }
 @media (min-width: 1280px) {
   .photo-gallery__container {
     padding: 0;
-    width: 1060px;
+    width: 66.25rem;
     margin: auto;
   }
 }
 .photo-gallery__header {
-  margin: 24px 0 16px 0px;
+  margin: 1.5rem 0 1rem 0rem;
   font-size: 24px;
   line-height: 32px;
   font-weight: 600;
@@ -366,7 +369,7 @@ h3 {
 }
 @media (min-width: 768px) {
   .photo-gallery__header {
-    margin: 48px 0 36px 0;
+    margin: 3rem 0 2.25rem 0;
   }
 }
 @media (min-width: 768px) {
@@ -379,7 +382,7 @@ h3 {
 .photo-gallery__display {
   display: flex;
   flex-direction: column;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
   row-gap: 20%;
 }
 @media (min-width: 768px) {
@@ -388,8 +391,8 @@ h3 {
     flex-wrap: wrap;
     justify-content: space-between;
     flex-direction: row;
-    gap: 24px;
-    margin-bottom: 36px;
+    gap: 1.5rem;
+    margin-bottom: 2.25rem;
   }
 }
 .photo-gallery__box {
@@ -398,7 +401,7 @@ h3 {
   -o-object-fit: cover;
      object-fit: cover;
   display: flex;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .photo-gallery__box {
@@ -424,20 +427,20 @@ h3 {
   background-color: #323232;
 }
 .footer__container {
-  padding: 0 16px;
+  padding: 0 1rem;
   color: #ffffff;
   display: flex;
   flex-direction: column;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .footer__container {
-    padding: 0 36px;
+    padding: 0 2.25rem;
   }
 }
 @media (min-width: 1280px) {
   .footer__container {
     padding: 0;
-    width: 1060px;
+    width: 66.25rem;
     margin: auto;
   }
 }
@@ -449,7 +452,7 @@ h3 {
   .footer__header {
     flex-direction: row;
     align-items: flex-end;
-    gap: 36px;
+    gap: 2.25rem;
   }
 }
 @media (min-width: 1280px) {
@@ -464,11 +467,11 @@ h3 {
   font-weight: 600;
   color: #323232;
   color: #ffffff;
-  margin: 24px 0 16px 0;
+  margin: 1.5rem 0 1rem 0;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .footer__header-text {
-    margin: 48px 0 0 0;
+    margin: 3rem 0 0 0;
     flex-grow: 1;
     flex-basis: 0;
     font-weight: 600;
@@ -476,8 +479,8 @@ h3 {
 }
 @media (min-width: 1280px) {
   .footer__header-text {
-    margin: 48px 36px 0 0;
-    min-width: 237px;
+    margin: 3rem 2.25rem 0 0;
+    min-width: 14.8125rem;
   }
 }
 @media (min-width: 768px) {
@@ -497,17 +500,14 @@ h3 {
   }
 }
 .footer__link {
-  margin: 0 16px 16px 0px;
-  margin-bottom: 0px;
+  margin: 0 1rem 1rem 0;
+  margin-bottom: 0rem;
 }
 @media (min-width: 768px) {
   .footer__link {
-    margin-right: 36px;
-    line-height: 32px;
+    margin-right: 2.25rem;
+    line-height: 2rem;
   }
-}
-.footer__link-icon {
-  /* REMEMBER TO REMOVE IF NOT USING */
 }
 .footer__card {
   display: flex;
@@ -516,7 +516,7 @@ h3 {
 @media (min-width: 768px) and (max-width: 1279px) {
   .footer__card {
     flex-direction: row;
-    gap: 36px;
+    gap: 2.25rem;
   }
 }
 @media (min-width: 1280px) {
@@ -532,8 +532,8 @@ h3 {
 }
 @media (min-width: 1280px) {
   .footer__card-container {
-    min-width: 237px;
-    margin-right: 36px;
+    min-width: 14.8125rem;
+    margin-right: 2.25rem;
   }
 }
 .footer__card-header {
@@ -542,12 +542,7 @@ h3 {
   font-weight: 400;
   color: #ffffff;
   font-weight: 600;
-  margin: 24px 0 16px 0;
-}
-@media (min-width: 768px) {
-  .footer__card-header {
-    margin: 48px 0 36px 0;
-  }
+  margin: 1.5rem 0 1rem 0;
 }
 @media (min-width: 768px) {
   .footer__card-header {
@@ -556,16 +551,22 @@ h3 {
     font-weight: 400;
   }
 }
+@media (min-width: 768px) {
+  .footer__card-header {
+    margin: 3rem 0 2.25rem 0;
+    font-weight: 600;
+  }
+}
 .footer__card-body {
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
   color: #ffffff;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .footer__card-body {
-    margin-bottom: 36px;
+    margin-bottom: 2.25rem;
   }
 }
 @media (min-width: 768px) {
@@ -584,13 +585,14 @@ h3 {
     justify-content: flex-end;
     flex-grow: 1;
     flex-basis: 0;
-    line-height: 32px;
+    line-height: 2rem;
+    margin-bottom: 0.75rem;
   }
 }
 .footer__logo-mobile {
-  margin: 24px 0 16px 0;
-  max-width: 120px;
-  max-height: 20px;
+  margin: 1.5rem 0 1rem 0;
+  max-width: 7.5rem;
+  max-height: 1.25rem;
 }
 @media (min-width: 768px) {
   .footer__logo-mobile {
@@ -602,12 +604,12 @@ h3 {
   line-height: 18px;
   font-weight: 400;
   color: #ffffff;
-  font-size: 11px;
-  margin-bottom: 16px;
+  font-size: 0.6875rem;
+  margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .footer__copyright {
-    margin: 12px 0 36px 0;
+    margin: 0.75rem 0 2.25rem 0;
   }
 }
 @media (min-width: 768px) {

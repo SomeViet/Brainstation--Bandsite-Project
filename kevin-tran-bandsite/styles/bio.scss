@@ -12,7 +12,7 @@
         @media (min-width: 1280px) {
             flex-direction: row;
             margin: auto;
-            width: 1060px;
+            width: 66.25rem;
         }
         display: flex;
         flex-direction: column;
@@ -20,29 +20,29 @@
 
         &__home {
             text-decoration: none;
-            font-size: 24px;
+            font-size: 1.5rem;
             font-weight: 400;
-            line-height: 32px;
+            line-height: 2rem;
             color: colors.$white;
             display: flex;
 
             &-item {
-                @media (min-width: 768px) {
+                @media (min-width: 48rem) {
                     align-self: center;
-                    padding: 36px 0;
-                    margin: 0 36px;
+                    padding: 2.25rem 0;
+                    margin: 0 2.25rem;
                 }
-                @media (min-width: 1280px) {
-                    margin-left: 0px;
+                @media (min-width: 80rem) {
+                    margin-left: 0;
                 }
-                padding-top: 16px;
-                margin-bottom: 16px;
-                max-width: 120px;
-                max-height: 20px;
+                padding-top: 1rem;
+                margin-bottom: 1rem;
+                max-width: 7.5rem;
+                max-height: 1.25rem;
             }
         }
         &__list {
-            @media (min-width: 768px) {
+            @media (min-width: 48rem) {
                 width: auto;
             }
             list-style: none;
@@ -55,27 +55,28 @@
         &__link {
             text-decoration: none;
             color: colors.$mercury;
-            font-size: 14px;
-            line-height: 22px;
+            font-size: 0.875rem;
+            line-height: 1.375rem;
             width: 50%;
             font-weight: 600;
         }
         &__item {
             @media (min-width: 768px) {
                 align-self: center;
-                padding: 36px 0 32px 0;
-                margin: 0 36px;
+                padding: 2.25rem 0 2rem 0;
+                margin: 0 2.25rem;
                 width: fit-content;
             }
             @media (min-width: 1280px) {
-                min-width: 68px;
+                min-width: 4.25rem;
             }
             text-align: center;
-            padding-bottom: 12px;
-            border-bottom: 4px solid transparent;
+            padding-bottom: 0.75rem;
+            border-bottom: 0.25rem solid transparent;
+
             &--active {
                 @extend .header-nav__item;
-                border-bottom: 4px;
+                border-bottom: 0.25rem;
                 border-bottom-color: white;
                 border-bottom-style: solid;
                 color: colors.$white;
@@ -83,12 +84,12 @@
             }
             &:hover {
                 @media (min-width: 768px) {
-                    padding-bottom: 32px;
+                    padding-bottom: 2rem;
                 }
-                border-bottom: 4px;
+                border-bottom: 0.25rem;
                 border-bottom-color: white;
                 border-bottom-style: solid;
-                padding-bottom: 12px;
+                padding-bottom: 0.75rem;
                 color: colors.$white;
                 font-weight: 600;
             }
@@ -98,6 +99,7 @@
 
 .hero {
     position: relative;
+
     &__container {
         position: relative;
         display: flex;
@@ -138,17 +140,17 @@
     flex-direction: column;
     &__header {
         @media (min-width: 768px) {
-            margin: 48px 0 36px 0;
+            margin: 3rem 0 2.25rem 0;
         }
         @include typekit.sectionheader;
-        margin: 24px 0 16px 0;
+        margin: 2.25rem 0 1rem 0;
     }
     &__container {
         @media (min-width: 768px) and (max-width: 1279px) {
-            padding: 0 72px;
+            padding: 0 4.5rem;
         }
         @media (min-width: 1280px) {
-            padding: 0 87px;
+            padding: 0 5.4375rem;
         }
     }
     &__main {
@@ -157,43 +159,46 @@
     }
     &__image {
         @media (min-width: 768px) {
-            margin-bottom: 36px;
+            margin-bottom: 2.25rem;
         }
-        margin-bottom: 16px;
+        margin-bottom: 1rem;
         background-size: cover;
         &-caption {
             @include typekit.subheader;
+            font-weight: 700;
             @media (min-width: 768px) {
-                margin-bottom: 16px;
+                margin-bottom: 1rem;
+                font-weight: 700;
             }
-            margin-bottom: 16px;
+            margin-bottom: 1rem;
         }
         &-artist {
             @include typekit.subheader;
+            font-weight: 700;
             @media (min-width: 768px) {
-                margin-bottom: 36px;
-                font-size: 18px;
+                margin-bottom: 2.25rem;
+                font-size: 1.125rem;
             }
-            margin-bottom: 16px;
+            margin-bottom: 1rem;
         }
     }
     &__subheader {
         @include typekit.subheader;
-        margin-bottom: 16px;
+        margin-bottom: 1rem;
     }
     &__card {
         @media (min-width: 768px) {
             display: flex;
             justify-content: space-between;
-            margin: 0 -18px;
+            margin: 0 -1.125rem;
         }
     }
     &__content {
         @media (min-width: 768px) {
-            margin: 0 18px 36px 18px;
+            margin: 0 1.125rem 2.25rem 1.125rem;
         }
         @include typekit.bodycopy;
-        margin-bottom: 16px;
+        margin-bottom: 1rem;
     }
 }
 
@@ -206,9 +211,9 @@
     }
     &__header {
         @media (min-width: 768px) {
-            margin: 48px 0 36px 0;
+            margin: 3rem 0 2.25rem 0;
         }
-        margin: 24px 0 16px 0px;
+        margin: 1.5rem 0 1rem 0rem;
         @include typekit.sectionheader;
     }
     &__display {
@@ -217,12 +222,12 @@
             flex-wrap: wrap;
             justify-content: space-between;
             flex-direction: row;
-            gap: 24px;
-            margin-bottom: 36px;
+            gap: 1.5rem;
+            margin-bottom: 2.25rem;
         }
         display: flex;
         flex-direction: column;
-        margin-bottom: 16px;
+        margin-bottom: 1rem;
         row-gap: 20%;
     }
     &__box {
@@ -236,7 +241,7 @@
         height: 100%;
         object-fit: cover;
         display: flex;
-        margin-bottom: 16px;
+        margin-bottom: 1rem;
     }
     &__image {
         @media (min-width: 768px) {
@@ -260,7 +265,7 @@
         @media (min-width: 768px) and (max-width: 1279px) {
             flex-direction: row;
             align-items: flex-end;
-            gap: 36px;
+            gap: 2.25rem;
         }
         @media (min-width: 1280px) {
             flex-direction: row;
@@ -271,18 +276,18 @@
         flex-direction: column;
         &-text {
             @media (min-width: 768px) and (max-width: 1279px) {
-                margin: 48px 0 0 0;
+                margin: 3rem 0 0 0;
                 flex-grow: 1;
                 flex-basis: 0;
                 font-weight: 600;
             }
             @media (min-width: 1280px) {
-                margin: 48px 36px 0 0;
-                min-width: 237px;
+                margin: 3rem 2.25rem 0 0;
+                min-width: 14.8125rem;
             }
             @include typekit.sectionheader;
             color: colors.$white;
-            margin: 24px 0 16px 0;
+            margin: 1.5rem 0 1rem 0;
         }
     }
     &__icon {
@@ -294,19 +299,16 @@
     }
     &__link {
         @media (min-width: 768px) {
-            margin-right: 36px;
-            line-height: 32px;
+            margin-right: 2.25rem;
+            line-height: 2rem;
         }
-        margin: 0 16px 16px 0px;
-        margin-bottom: 0px;
-        &-icon {
-            /* REMEMBER TO REMOVE IF NOT USING */
-        }
+        margin: 0 1rem 1rem 0;
+        margin-bottom: 0rem;
     }
     &__card {
         @media (min-width: 768px) and (max-width: 1279px) {
             flex-direction: row;
-            gap: 36px;
+            gap: 2.25rem;
         }
         @media (min-width: 1280px) {
             flex-direction: row;
@@ -319,24 +321,25 @@
                 flex-basis: 0;
             }
             @media (min-width: 1280px) {
-                min-width: 237px;
-                margin-right: 36px;
+                min-width: 14.8125rem;
+                margin-right: 2.25rem;
             }
         }
         &-header {
-            @media (min-width: 768px) {
-                margin: 48px 0 36px 0;
-            }
             @include typekit.footercopy;
+            @media (min-width: 768px) {
+                margin: 3rem 0 2.25rem 0;
+                font-weight: 600;
+            }
             font-weight: 600;
-            margin: 24px 0 16px 0;
+            margin: 1.5rem 0 1rem 0;
         }
         &-body {
             @media (min-width: 768px) {
-                margin-bottom: 36px;
+                margin-bottom: 2.25rem;
             }
             @include typekit.footercopy;
-            margin-bottom: 16px;
+            margin-bottom: 1rem;
         }
     }
     &__logo {
@@ -345,24 +348,25 @@
             justify-content: flex-end;
             flex-grow: 1;
             flex-basis: 0;
-            line-height: 32px;
+            line-height: 2rem;
+            margin-bottom: 0.75rem;
         }
         display: none;
         &-mobile {
             @media (min-width: 768px) {
                 display: none;
             }
-            margin: 24px 0 16px 0;
-            max-width: 120px;
-            max-height: 20px;
+            margin: 1.5rem 0 1rem 0;
+            max-width: 7.5rem;
+            max-height: 1.25rem;
         }
     }
     &__copyright {
         @media (min-width: 768px) {
-            margin: 12px 0 36px 0;
+            margin: 0.75rem 0 2.25rem 0;
         }
         @include typekit.footercopy;
-        font-size: 11px;
-        margin-bottom: 16px;
+        font-size: 0.6875rem;
+        margin-bottom: 1rem;
     }
 }
