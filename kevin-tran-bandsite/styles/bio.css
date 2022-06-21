@@ -47,7 +47,7 @@ h3 {
   .header-nav {
     flex-direction: row;
     margin: auto;
-    width: 66.25rem;
+    width: 63.75rem;
   }
 }
 .header-nav__home {
@@ -186,7 +186,7 @@ h3 {
 @media (min-width: 1280px) {
   .hero__text {
     padding: 0;
-    width: 66.25rem;
+    width: 63.75rem;
     margin: auto;
   }
 }
@@ -211,7 +211,7 @@ h3 {
 @media (min-width: 1280px) {
   .biography {
     padding: 0;
-    width: 66.25rem;
+    width: 63.75rem;
     margin: auto;
   }
 }
@@ -356,7 +356,7 @@ h3 {
 @media (min-width: 1280px) {
   .photo-gallery__container {
     padding: 0;
-    width: 66.25rem;
+    width: 63.75rem;
     margin: auto;
   }
 }
@@ -440,7 +440,7 @@ h3 {
 @media (min-width: 1280px) {
   .footer__container {
     padding: 0;
-    width: 66.25rem;
+    width: 63.75rem;
     margin: auto;
   }
 }
