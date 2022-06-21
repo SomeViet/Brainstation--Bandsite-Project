@@ -524,7 +524,7 @@ h3 {
     flex-direction: row;
   }
 }
-@media (min-width: 760px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1279px) {
   .footer__card-container {
     flex-grow: 1;
     flex-basis: 0;
