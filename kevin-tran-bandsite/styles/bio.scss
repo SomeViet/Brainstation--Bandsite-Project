@@ -1,15 +1,16 @@
-@use "./partials/global";
-@use "./partials/colors";
-@use "./partials/typekit";
+@use "./partials/global" as *;
+@use "./partials/variables" as *;
+@use "./partials/typekit" as *;
+@use "./partials/mediaqueries" as *;
 
 .header {
-    background-color: colors.$bandsite-black;
+    background-color: $bandsite-black;
 
     &-nav {
-        @media (min-width: 768px) and (max-width: 1279px) {
+        @include tablet {
             flex-direction: row;
         }
-        @media (min-width: 1280px) {
+        @include desktop {
             flex-direction: row;
             margin: auto;
             width: 66.25rem;
@@ -23,16 +24,16 @@
             font-size: 1.5rem;
             font-weight: 400;
             line-height: 2rem;
-            color: colors.$white;
+            color: $white;
             display: flex;
 
             &-item {
-                @media (min-width: 48rem) {
+                @include tablet {
                     align-self: center;
                     padding: 2.25rem 0;
                     margin: 0 2.25rem;
                 }
-                @media (min-width: 80rem) {
+                @include desktop {
                     margin-left: 0;
                 }
                 padding-top: 1rem;
@@ -41,8 +42,9 @@
                 max-height: 1.25rem;
             }
         }
+
         &__list {
-            @media (min-width: 48rem) {
+            @include tablet {
                 width: auto;
             }
             list-style: none;
@@ -52,22 +54,24 @@
             margin: 0;
             padding: 0;
         }
+
         &__link {
             text-decoration: none;
-            color: colors.$mercury;
+            color: $mercury;
             font-size: 0.875rem;
             line-height: 1.375rem;
             width: 50%;
             font-weight: 600;
         }
+
         &__item {
-            @media (min-width: 768px) {
+            @include tablet {
                 align-self: center;
                 padding: 2.25rem 0 2rem 0;
                 margin: 0 2.25rem;
                 width: fit-content;
             }
-            @media (min-width: 1280px) {
+            @include desktop {
                 min-width: 4.25rem;
             }
             text-align: center;
@@ -77,20 +81,21 @@
             &--active {
                 @extend .header-nav__item;
                 border-bottom: 0.25rem;
-                border-bottom-color: white;
+                border-bottom-color: $white;
                 border-bottom-style: solid;
-                color: colors.$white;
+                color: $white;
                 font-weight: 600;
             }
+
             &:hover {
-                @media (min-width: 768px) {
+                @include tablet {
                     padding-bottom: 2rem;
                 }
                 border-bottom: 0.25rem;
-                border-bottom-color: white;
+                border-bottom-color: $white;
                 border-bottom-style: solid;
                 padding-bottom: 0.75rem;
-                color: colors.$white;
+                color: $white;
                 font-weight: 600;
             }
         }
@@ -105,28 +110,30 @@
         display: flex;
         flex-direction: column;
     }
+
     &__image {
-        @media (min-width: 1280px) {
+        @include desktop {
             height: 65vh;
             object-fit: cover;
         }
+
         &-overlay {
             position: absolute;
             width: 100%;
             height: 100%;
-            background-color: colors.$bandsite-black;
+            background-color: $bandsite-black;
             opacity: 0.5;
         }
     }
 
     &__text {
-        @include typekit.pageheader;
-        @include global.page-sidemargins;
-        color: colors.$white;
+        @include pageheader;
+        @include page-sidemargins;
+        color: $white;
         position: absolute;
         top: 50%;
         transform: translate(0, -50%);
-        @media (min-width: 1280px) {
+        @include desktop {
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
@@ -135,89 +142,101 @@
 }
 
 .biography {
-    @include global.page-sidemargins;
+    @include page-sidemargins;
     display: flex;
     flex-direction: column;
+
     &__header {
-        @media (min-width: 768px) {
+        @include tablet {
             margin: 3rem 0 2.25rem 0;
         }
-        @include typekit.sectionheader;
+        @include sectionheader;
         margin: 2.25rem 0 1rem 0;
     }
+
     &__container {
-        @media (min-width: 768px) and (max-width: 1279px) {
+        @include tablet {
             padding: 0 4.5rem;
         }
-        @media (min-width: 1280px) {
+        @include desktop {
             padding: 0 5.4375rem;
         }
     }
+
     &__main {
         display: flex;
         flex-direction: column;
     }
+
     &__image {
-        @media (min-width: 768px) {
+        @include tablet {
             margin-bottom: 2.25rem;
         }
         margin-bottom: 1rem;
         background-size: cover;
+
         &-caption {
-            @include typekit.subheader;
+            @include subheader;
             font-weight: 700;
-            @media (min-width: 768px) {
+            @include tablet {
                 margin-bottom: 1rem;
                 font-weight: 700;
             }
             margin-bottom: 1rem;
         }
+
         &-artist {
-            @include typekit.subheader;
+            @include subheader;
             font-weight: 700;
-            @media (min-width: 768px) {
+            @include tablet {
                 margin-bottom: 2.25rem;
                 font-size: 1.125rem;
             }
             margin-bottom: 1rem;
         }
     }
+
     &__subheader {
-        @include typekit.subheader;
+        @include subheader;
         margin-bottom: 1rem;
     }
+
     &__card {
-        @media (min-width: 768px) {
+        @include tablet {
             display: flex;
             justify-content: space-between;
             margin: 0 -1.125rem;
         }
     }
+
     &__content {
-        @media (min-width: 768px) {
+        @include tablet {
             margin: 0 1.125rem 2.25rem 1.125rem;
         }
-        @include typekit.bodycopy;
+        @include bodycopy;
         margin-bottom: 1rem;
     }
 }
 
 .photo-gallery {
-    background-color: colors.$alabaster;
+    background-color: $alabaster;
+
     &__container {
-        @include global.page-sidemargins;
+        @include page-sidemargins;
         display: flex;
         flex-direction: column;
     }
+
     &__header {
-        @media (min-width: 768px) {
+        @include tablet {
             margin: 3rem 0 2.25rem 0;
         }
         margin: 1.5rem 0 1rem 0rem;
-        @include typekit.sectionheader;
+        @include sectionheader;
     }
+
     &__display {
-        @media (min-width: 768px) {
+        @include tablet {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -230,8 +249,9 @@
         margin-bottom: 1rem;
         row-gap: 20%;
     }
+
     &__box {
-        @media (min-width: 768px) {
+        @include tablet {
             width: 31%;
             flex-grow: 1;
             margin: 0;
@@ -243,8 +263,9 @@
         display: flex;
         margin-bottom: 1rem;
     }
+
     &__image {
-        @media (min-width: 768px) {
+        @include tablet {
             max-width: 100%;
             max-height: 100%;
         }
@@ -254,96 +275,105 @@
 }
 
 .footer {
-    background-color: colors.$bandsite-black;
+    background-color: $bandsite-black;
+
     &__container {
-        @include global.page-sidemargins;
-        color: colors.$white;
+        @include page-sidemargins;
+        color: $white;
         display: flex;
         flex-direction: column;
     }
+
     &__header {
-        @media (min-width: 768px) and (max-width: 1279px) {
+        @include tablet {
             flex-direction: row;
             align-items: flex-end;
             gap: 2.25rem;
         }
-        @media (min-width: 1280px) {
+        @include desktop {
             flex-direction: row;
             align-items: flex-end;
         }
-
         display: flex;
         flex-direction: column;
+
         &-text {
-            @media (min-width: 768px) and (max-width: 1279px) {
+            @include tablet {
                 margin: 3rem 0 0 0;
                 flex-grow: 1;
                 flex-basis: 0;
                 font-weight: 600;
             }
-            @media (min-width: 1280px) {
+            @include desktop {
                 margin: 3rem 2.25rem 0 0;
                 min-width: 14.8125rem;
             }
-            @include typekit.sectionheader;
-            color: colors.$white;
+            @include sectionheader;
+            color: $white;
             margin: 1.5rem 0 1rem 0;
         }
     }
+
     &__icon {
-        @media (min-width: 768px) {
+        @include tablet {
             flex-grow: 1;
             flex-basis: 0;
         }
         display: flex;
     }
+
     &__link {
-        @media (min-width: 768px) {
+        @include tablet {
             margin-right: 2.25rem;
             line-height: 2rem;
         }
         margin: 0 1rem 1rem 0;
         margin-bottom: 0rem;
     }
+
     &__card {
-        @media (min-width: 768px) and (max-width: 1279px) {
+        @include tablet {
             flex-direction: row;
             gap: 2.25rem;
         }
-        @media (min-width: 1280px) {
+        @include desktop {
             flex-direction: row;
         }
         display: flex;
         flex-direction: column;
+
         &-container {
-            @media (min-width: 760px) and (max-width: 1279px) {
+            @include tablet {
                 flex-grow: 1;
                 flex-basis: 0;
             }
-            @media (min-width: 1280px) {
+            @include desktop {
                 min-width: 14.8125rem;
                 margin-right: 2.25rem;
             }
         }
+
         &-header {
-            @include typekit.footercopy;
-            @media (min-width: 768px) {
+            @include footercopy;
+            @include tablet {
                 margin: 3rem 0 2.25rem 0;
                 font-weight: 600;
             }
             font-weight: 600;
             margin: 1.5rem 0 1rem 0;
         }
+
         &-body {
-            @media (min-width: 768px) {
+            @include tablet {
                 margin-bottom: 2.25rem;
             }
-            @include typekit.footercopy;
+            @include footercopy;
             margin-bottom: 1rem;
         }
     }
+
     &__logo {
-        @media (min-width: 768px) {
+        @include tablet {
             display: flex;
             justify-content: flex-end;
             flex-grow: 1;
@@ -352,8 +382,9 @@
             margin-bottom: 0.75rem;
         }
         display: none;
+
         &-mobile {
-            @media (min-width: 768px) {
+            @include tablet {
                 display: none;
             }
             margin: 1.5rem 0 1rem 0;
@@ -361,11 +392,12 @@
             max-height: 1.25rem;
         }
     }
+
     &__copyright {
-        @media (min-width: 768px) {
+        @include tablet {
             margin: 0.75rem 0 2.25rem 0;
         }
-        @include typekit.footercopy;
+        @include footercopy;
         font-size: 0.6875rem;
         margin-bottom: 1rem;
     }

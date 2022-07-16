@@ -1,7 +1,8 @@
-@use "colors";
+@use "variables" as *;
+@use "mediaqueries" as *;
 
 @mixin pageheader {
-    @media (min-width: 768px) {
+    @include tablet {
         font-size: 60px;
         line-height: 68px;
         font-weight: 600;
@@ -9,10 +10,10 @@
     font-size: 24px;
     line-height: 32px;
     font-weight: 600;
-    color: colors.$bandsite-black;
+    color: $bandsite-black;
 }
 @mixin sectionheader {
-    @media (min-width: 768px) {
+    @include tablet {
         font-size: 36px;
         line-height: 44px;
         font-weight: 600;
@@ -20,10 +21,10 @@
     font-size: 24px;
     line-height: 32px;
     font-weight: 600;
-    color: colors.$bandsite-black;
+    color: $bandsite-black;
 }
 @mixin subheader {
-    @media (min-width: 768px) {
+    @include tablet {
         font-size: 24px;
         line-height: 32px;
         font-weight: 600;
@@ -31,10 +32,10 @@
     font-size: 14px;
     line-height: 22px;
     font-weight: 600;
-    color: colors.$bandsite-black;
+    color: $bandsite-black;
 }
 @mixin bodycopy {
-    @media (min-width: 768px) {
+    @include tablet {
         font-size: 14px;
         line-height: 22px;
         font-weight: 400;
@@ -42,10 +43,10 @@
     font-size: 13px;
     line-height: 18px;
     font-weight: 400;
-    color: colors.$bandsite-black;
+    color: $bandsite-black;
 }
 @mixin footercopy {
-    @media (min-width: 768px) {
+    @include tablet {
         font-size: 14px;
         line-height: 20px;
         font-weight: 400;
@@ -53,10 +54,10 @@
     font-size: 13px;
     line-height: 18px;
     font-weight: 400;
-    color: colors.$white;
+    color: $white;
 }
 @mixin labelbutton {
-    @media (min-width: 768px) {
+    @include tablet {
         font-size: 12px;
         line-height: 20px;
         font-weight: 700;
