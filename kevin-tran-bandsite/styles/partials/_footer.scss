@@ -1,0 +1,133 @@
+@use "variables" as *;
+@use "global" as *;
+@use "mediaqueries" as *;
+@use "typekit" as *;
+
+.footer {
+    background-color: $bandsite-black;
+
+    &__container {
+        @include page-sidemargins;
+        color: $white;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__header {
+        @include tablet {
+            flex-direction: row;
+            align-items: flex-end;
+            gap: 2.25rem;
+        }
+        @include desktop {
+            flex-direction: row;
+            align-items: flex-end;
+        }
+        display: flex;
+        flex-direction: column;
+
+        &-text {
+            @include tablet {
+                margin: 3rem 0 0 0;
+                flex-grow: 1;
+                flex-basis: 0;
+                font-weight: 600;
+            }
+            @include desktop {
+                margin: 3rem 2.25rem 0 0;
+                min-width: 14.8125rem;
+            }
+            @include sectionheader;
+            color: $white;
+            margin: 1.5rem 0 1rem 0;
+        }
+    }
+
+    &__icon {
+        @include tablet {
+            flex-grow: 1;
+            flex-basis: 0;
+        }
+        display: flex;
+    }
+
+    &__link {
+        @include tablet {
+            margin-right: 2.25rem;
+            line-height: 2rem;
+        }
+        margin: 0 1rem 1rem 0;
+        margin-bottom: 0rem;
+    }
+
+    &__card {
+        @include tablet {
+            flex-direction: row;
+            gap: 2.25rem;
+        }
+        @include desktop {
+            flex-direction: row;
+        }
+        display: flex;
+        flex-direction: column;
+
+        &-container {
+            @include tablet {
+                flex-grow: 1;
+                flex-basis: 0;
+            }
+            @include desktop {
+                min-width: 14.8125rem;
+                margin-right: 2.25rem;
+            }
+        }
+
+        &-header {
+            @include footercopy;
+            @include tablet {
+                margin: 3rem 0 2.25rem 0;
+                font-weight: 600;
+            }
+            font-weight: 600;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        &-body {
+            @include tablet {
+                margin-bottom: 2.25rem;
+            }
+            @include footercopy;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__logo {
+        @include tablet {
+            display: flex;
+            justify-content: flex-end;
+            flex-grow: 1;
+            flex-basis: 0;
+            line-height: 2rem;
+            margin-bottom: 0.75rem;
+        }
+        display: none;
+
+        &-mobile {
+            @include tablet {
+                display: none;
+            }
+            margin: 1.5rem 0 1rem 0;
+            max-width: 7.5rem;
+            max-height: 1.25rem;
+        }
+    }
+
+    &__copyright {
+        @include tablet {
+            margin: 0.75rem 0 2.25rem 0;
+        }
+        @include footercopy;
+        font-size: 0.6875rem;
+        margin-bottom: 1rem;
+    }
+}

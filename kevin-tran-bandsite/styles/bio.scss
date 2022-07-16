@@ -2,105 +2,8 @@
 @use "./partials/variables" as *;
 @use "./partials/typekit" as *;
 @use "./partials/mediaqueries" as *;
-
-.header {
-    background-color: $bandsite-black;
-
-    &-nav {
-        @include tablet {
-            flex-direction: row;
-        }
-        @include desktop {
-            flex-direction: row;
-            margin: auto;
-            width: 66.25rem;
-        }
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        &__home {
-            text-decoration: none;
-            font-size: 1.5rem;
-            font-weight: 400;
-            line-height: 2rem;
-            color: $white;
-            display: flex;
-
-            &-item {
-                @include tablet {
-                    align-self: center;
-                    padding: 2.25rem 0;
-                    margin: 0 2.25rem;
-                }
-                @include desktop {
-                    margin-left: 0;
-                }
-                padding-top: 1rem;
-                margin-bottom: 1rem;
-                max-width: 7.5rem;
-                max-height: 1.25rem;
-            }
-        }
-
-        &__list {
-            @include tablet {
-                width: auto;
-            }
-            list-style: none;
-            display: flex;
-            width: 100%;
-            justify-content: space-around;
-            margin: 0;
-            padding: 0;
-        }
-
-        &__link {
-            text-decoration: none;
-            color: $mercury;
-            font-size: 0.875rem;
-            line-height: 1.375rem;
-            width: 50%;
-            font-weight: 600;
-        }
-
-        &__item {
-            @include tablet {
-                align-self: center;
-                padding: 2.25rem 0 2rem 0;
-                margin: 0 2.25rem;
-                width: fit-content;
-            }
-            @include desktop {
-                min-width: 4.25rem;
-            }
-            text-align: center;
-            padding-bottom: 0.75rem;
-            border-bottom: 0.25rem solid transparent;
-
-            &--active {
-                @extend .header-nav__item;
-                border-bottom: 0.25rem;
-                border-bottom-color: $white;
-                border-bottom-style: solid;
-                color: $white;
-                font-weight: 600;
-            }
-
-            &:hover {
-                @include tablet {
-                    padding-bottom: 2rem;
-                }
-                border-bottom: 0.25rem;
-                border-bottom-color: $white;
-                border-bottom-style: solid;
-                padding-bottom: 0.75rem;
-                color: $white;
-                font-weight: 600;
-            }
-        }
-    }
-}
+@use "./partials/header" as *;
+@use "./partials/footer" as *;
 
 .hero {
     position: relative;
@@ -274,131 +177,79 @@
     }
 }
 
-.footer {
-    background-color: $bandsite-black;
-
-    &__container {
-        @include page-sidemargins;
-        color: $white;
-        display: flex;
-        flex-direction: column;
-    }
-
+.comments {
+    @include page-sidemargins;
     &__header {
         @include tablet {
-            flex-direction: row;
-            align-items: flex-end;
-            gap: 2.25rem;
+            margin: 3rem 0 2.25rem 0;
         }
-        @include desktop {
-            flex-direction: row;
-            align-items: flex-end;
-        }
-        display: flex;
-        flex-direction: column;
-
-        &-text {
-            @include tablet {
-                margin: 3rem 0 0 0;
-                flex-grow: 1;
-                flex-basis: 0;
-                font-weight: 600;
-            }
-            @include desktop {
-                margin: 3rem 2.25rem 0 0;
-                min-width: 14.8125rem;
-            }
-            @include sectionheader;
-            color: $white;
-            margin: 1.5rem 0 1rem 0;
-        }
+        margin: 1.5rem 0 1rem 0rem;
+        @include sectionheader;
     }
-
-    &__icon {
-        @include tablet {
-            flex-grow: 1;
-            flex-basis: 0;
-        }
+    &__form {
         display: flex;
     }
-
-    &__link {
-        @include tablet {
-            margin-right: 2.25rem;
-            line-height: 2rem;
-        }
-        margin: 0 1rem 1rem 0;
-        margin-bottom: 0rem;
+    &__container {
+        flex-grow: 1;
     }
-
-    &__card {
+    &__avatar {
         @include tablet {
-            flex-direction: row;
-            gap: 2.25rem;
+            width: 48px;
+            height: 48px;
         }
-        @include desktop {
-            flex-direction: row;
-        }
-        display: flex;
-        flex-direction: column;
-
-        &-container {
-            @include tablet {
-                flex-grow: 1;
-                flex-basis: 0;
-            }
-            @include desktop {
-                min-width: 14.8125rem;
-                margin-right: 2.25rem;
-            }
-        }
-
-        &-header {
-            @include footercopy;
-            @include tablet {
-                margin: 3rem 0 2.25rem 0;
-                font-weight: 600;
-            }
-            font-weight: 600;
-            margin: 1.5rem 0 1rem 0;
-        }
-
-        &-body {
-            @include tablet {
-                margin-bottom: 2.25rem;
-            }
-            @include footercopy;
-            margin-bottom: 1rem;
-        }
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        object-fit: cover;
+        margin-right: 16px;
     }
-
-    &__logo {
+    &__name-label {
+        @include labelbutton;
+        font-weight: 400;
+        color: $silver;
+    }
+    &__name-input {
         @include tablet {
-            display: flex;
-            justify-content: flex-end;
-            flex-grow: 1;
-            flex-basis: 0;
-            line-height: 2rem;
-            margin-bottom: 0.75rem;
+            min-height: 48px;
+            padding: 0 16px;
         }
-        display: none;
-
-        &-mobile {
-            @include tablet {
-                display: none;
-            }
-            margin: 1.5rem 0 1rem 0;
-            max-width: 7.5rem;
-            max-height: 1.25rem;
-        }
+        background-color: $alabaster;
+        min-height: 36px;
+        border-radius: 4px;
+        padding: 0 12px;
+        box-sizing: border-box;
+        width: 100%;
     }
-
-    &__copyright {
+    &__comment-label {
+        @include labelbutton;
+        font-weight: 400;
+        color: $silver;
+    }
+    &__comment-input {
         @include tablet {
-            margin: 0.75rem 0 2.25rem 0;
+            min-height: 48px;
+            padding: 0 16px;
         }
-        @include footercopy;
-        font-size: 0.6875rem;
-        margin-bottom: 1rem;
+        background-color: $alabaster;
+        min-height: 36px;
+        border-radius: 4px;
+        padding: 0 12px;
+        box-sizing: border-box;
+        width: 100%;
     }
+    &__submit-button {
+        background-color: $bandsite-black;
+        color: $white;
+        height: 40px;
+        min-width: 150px;
+        padding: 0px 32px;
+        display: block;
+        border: 0px;
+        border-radius: 4px;
+        margin: 24px 0;
+    }
+}
+
+.comment-red {
+    color: red;
 }

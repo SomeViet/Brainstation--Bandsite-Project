@@ -20,7 +20,7 @@
                     <a href="index.html" class="header-nav__link">
                         <li class="header-nav__item--active">Biography</li>
                     </a>
-                    <a href="#" class="header-nav__link">
+                    <a href="pages/shows.html" class="header-nav__link">
                         <li class="header-nav__item">Shows</li>
                     </a>
                 </ul>
@@ -151,6 +151,47 @@
                 </div>
             </section>
         </section>
+        <section class="comments">
+            <h2 class="comments__header">Join the Conversation</h2>
+            <form
+                action="URL"
+                method="POST"
+                id="comments"
+                class="comments__form"
+            >
+                <img
+                    src="./assets/images/Mohan-muruge.jpg"
+                    class="comments__avatar"
+                />
+                <div class="comments__container">
+                    <p class="comments__name-label">NAME</p>
+                    <input
+                        type="text"
+                        value="Enter your name"
+                        onfocus="this.value=''"
+                        name="user_name"
+                        class="comments__name-input"
+                    />
+                    <p class="comments__comment-label">COMMENT</p>
+                    <input
+                        type="text"
+                        value="Add a new comment"
+                        onfocus="this.value=''"
+                        name="user_comment"
+                        class="comments__comment-input"
+                    />
+                    <button type="submit" class="comments__submit-button">
+                        Press Me!
+                    </button>
+                </div>
+            </form>
+            <div id="commentsgohere">
+                <ul>
+                    <li>Name</li>
+                    <li>Comment</li>
+                </ul>
+            </div>
+        </section>
         <footer class="footer">
             <div class="footer__container">
                 <div class="footer__header">
@@ -221,7 +262,8 @@
                 <div class="footer__copyright">
                     Copyright The Bees Knees © 2021 All Rights Reserved
                 </div>
-
+            </div>
         </footer>
+        <script src="./scripts/index-page.js"></script>
     </body>
 </html>
