@@ -1,0 +1,112 @@
+@use "variables" as *;
+@use "global" as *;
+@use "mediaqueries" as *;
+@use "typekit" as *;
+
+.hero {
+    position: relative;
+    height: 20%;
+
+    &__container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__image {
+        max-height: 60vh;
+        object-fit: cover;
+        @include desktop {
+            height: 80vh;
+            object-fit: cover;
+        }
+
+        &-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: $bandsite-black;
+            opacity: 0.5;
+        }
+    }
+    &__bios-text {
+        @include pageheader;
+        @include page-sidemargins;
+        margin: 0;
+        color: $white;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        @include desktop {
+            width: 33.125rem;
+            left: 50%;
+            transform: translate(-100%, -50%);
+        }
+    }
+    &__shows-container {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 100%;
+        @include desktop {
+            @include page-sidemargins;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+    }
+    &__shows-subcontainer {
+        display: flex;
+        flex-direction: column;
+        @include desktop {
+        }
+    }
+    &__shows-text {
+        @include pageheader;
+        @include page-sidemargins;
+        color: $white;
+        max-width: 240px;
+        margin: 0;
+        @include tablet {
+            max-width: 608px;
+        }
+        @include desktop {
+            margin: 0;
+            max-width: 480px;
+        }
+    }
+    &__shows-subtext {
+        @include subheader;
+        @include page-sidemargins;
+        font-weight: 400;
+        color: $white;
+        margin: 16px 0px;
+        @include tablet {
+            margin: 36px 0;
+        }
+        @include desktop {
+            padding: 0;
+            display: inline-flex;
+            width: auto;
+        }
+    }
+
+    &__iframe {
+        @include page-sidemargins;
+        height: 30%;
+        max-height: 166px;
+        border: 0px;
+        @include tablet {
+            align-self: auto;
+            width: 65%;
+        }
+        @include desktop {
+            margin: 0;
+            width: 25%;
+        }
+    }
+}

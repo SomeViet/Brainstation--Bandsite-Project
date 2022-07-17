@@ -1,2 +1,7 @@
+@use "./partials/global" as *;
+@use "./partials/variables" as *;
+@use "./partials/typekit" as *;
+@use "./partials/mediaqueries" as *;
 @use "./partials/header" as *;
 @use "./partials/footer" as *;
+@use "./partials/hero" as *;

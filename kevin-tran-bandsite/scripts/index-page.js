@@ -4,14 +4,14 @@ let commentHistory = [
         comment:
             "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
         dateHistory: "12/20/2020",
-        avatarSource: "",
+        // avatarSource: "",
     },
     {
         userName: "Kevin Tran",
         comment:
             "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
         dateHistory: "01/01/19",
-        avatarSource: "",
+        // avatarSource: "",
     },
 ];
 
@@ -41,8 +41,7 @@ let historyUpdate = () => {
         // Avatar Setup
         avatarSetup.innerText = commentHistory[i].avatarSource;
         avatarSetup.classList.add("comments__avatar");
-        // not applicable for sprint 2
-        avatarSetup.setAttribute("src", "#");
+        avatarSetup.setAttribute("src", "");
 
         // Structure Setup
         let divHeader = document.createElement("div");
@@ -79,7 +78,7 @@ form.addEventListener("submit", function (convo) {
         comment: convo.target.user_comment.value,
         dateHistory: dateNow.toLocaleDateString(),
         // not applicable for sprint 2
-        avatar: "",
+        avatarSource: "",
     });
     console.log(commentHistory);
     clear();

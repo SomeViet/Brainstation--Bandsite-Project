@@ -4,45 +4,7 @@
 @use "./partials/mediaqueries" as *;
 @use "./partials/header" as *;
 @use "./partials/footer" as *;
-
-.hero {
-    position: relative;
-
-    &__container {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-    }
-
-    &__image {
-        @include desktop {
-            height: 65vh;
-            object-fit: cover;
-        }
-
-        &-overlay {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-color: $bandsite-black;
-            opacity: 0.5;
-        }
-    }
-
-    &__text {
-        @include pageheader;
-        @include page-sidemargins;
-        color: $white;
-        position: absolute;
-        top: 50%;
-        transform: translate(0, -50%);
-        @include desktop {
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-        }
-    }
-}
+@use "./partials/hero" as *;
 
 .biography {
     @include page-sidemargins;
@@ -186,13 +148,16 @@
         margin: 1.5rem 0 1rem 0rem;
         @include sectionheader;
     }
+
     &__form {
         display: flex;
         border-bottom: 1px solid $mercury;
     }
+
     &__input-container {
         flex-grow: 1;
     }
+
     &__avatar {
         @include tablet {
             width: 48px;
@@ -205,18 +170,20 @@
         object-fit: cover;
         margin: 24px 16px 16px 0;
     }
+
     &__name-label {
         @include labelbutton;
         font-weight: 400;
         color: $silver;
         margin-bottom: 4px;
     }
+
     &__name-input {
         @include tablet {
             min-height: 48px;
             padding: 16px;
         }
-        @font-family: "Avenir";
+        font-family: "Avenir";
         background-color: $alabaster;
         color: $bandsite-black;
         min-height: 36px;
@@ -237,12 +204,14 @@
             border: 1px solid #d22d2d;
         }
     }
+
     &__comment-label {
         @include labelbutton;
         font-weight: 400;
         color: $silver;
         margin-bottom: 4px;
     }
+
     &__comment-input {
         @include tablet {
             min-height: 48px;
@@ -269,7 +238,12 @@
             border: 1px solid #d22d2d;
         }
     }
+
     &__submit-button {
+        @include tablet {
+            width: 200px;
+            float: right;
+        }
         background-color: $bandsite-black;
         color: $white;
         height: 40px;
@@ -279,40 +253,44 @@
         border: 0px;
         border-radius: 4px;
         margin-bottom: 24px;
+        width: 100%;
     }
+
     &__history {
         padding: 0;
         margin: 0;
-    }
-    &__history-list-item {
-        list-style: none;
-        display: flex;
-        border-bottom: 1px solid $mercury;
-    }
-    &__history-right-container {
-        margin: 16px 0;
-        flex-grow: 1;
-    }
-    &__history-header {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 8px;
-    }
-    &__history-name {
-        @include subheader;
-        margin: 0px;
-    }
-    &__history-timestamp {
-        @include subheader;
-        color: $silver;
-        font-weight: 400;
-        margin: 0px;
-    }
-    &__history-comment {
-        @include bodycopy;
-    }
-}
 
-.comment-red {
-    color: red;
+        &-list-item {
+            list-style: none;
+            display: flex;
+            border-bottom: 1px solid $mercury;
+        }
+
+        &-right-container {
+            margin: 16px 0;
+            flex-grow: 1;
+        }
+
+        &-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        &-name {
+            @include subheader;
+            margin: 0px;
+        }
+
+        &-timestamp {
+            @include subheader;
+            color: $silver;
+            font-weight: 400;
+            margin: 0px;
+        }
+
+        &-comment {
+            @include bodycopy;
+        }
+    }
 }
