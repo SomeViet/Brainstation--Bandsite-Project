@@ -188,8 +188,9 @@
     }
     &__form {
         display: flex;
+        border-bottom: 1px solid $mercury;
     }
-    &__container {
+    &__input-container {
         flex-grow: 1;
     }
     &__avatar {
@@ -197,45 +198,76 @@
             width: 48px;
             height: 48px;
         }
-        border-radius: 50%;
+        background-color: $mercury;
+        border-radius: 50%/50%;
         width: 36px;
         height: 36px;
         object-fit: cover;
-        margin-right: 16px;
+        margin: 24px 16px 16px 0;
     }
     &__name-label {
         @include labelbutton;
         font-weight: 400;
         color: $silver;
+        margin-bottom: 4px;
     }
     &__name-input {
         @include tablet {
             min-height: 48px;
-            padding: 0 16px;
+            padding: 16px;
         }
+        @font-family: "Avenir";
         background-color: $alabaster;
+        color: $bandsite-black;
         min-height: 36px;
         border-radius: 4px;
-        padding: 0 12px;
+        padding: 12px;
         box-sizing: border-box;
         width: 100%;
+        border: 1px solid $mercury;
+        margin-bottom: 16px;
+        &::placeholder {
+            color: $bandsite-black;
+            opacity: 1;
+        }
+        &:active {
+            border: 1px solid $bandsite-black;
+        }
+        &:invalid {
+            border: 1px solid #d22d2d;
+        }
     }
     &__comment-label {
         @include labelbutton;
         font-weight: 400;
         color: $silver;
+        margin-bottom: 4px;
     }
     &__comment-input {
         @include tablet {
             min-height: 48px;
-            padding: 0 16px;
+            padding: 16px;
         }
+        &::placeholder {
+            color: $bandsite-black;
+            opacity: 1;
+        }
+        font-family: "Avenir";
         background-color: $alabaster;
         min-height: 36px;
         border-radius: 4px;
-        padding: 0 12px;
+        padding: 12px;
         box-sizing: border-box;
         width: 100%;
+        border: 1px solid $mercury;
+        margin-bottom: 16px;
+        resize: none;
+        &:active {
+            border: 1px solid $bandsite-black;
+        }
+        &:invalid {
+            border: 1px solid #d22d2d;
+        }
     }
     &__submit-button {
         background-color: $bandsite-black;
@@ -246,7 +278,38 @@
         display: block;
         border: 0px;
         border-radius: 4px;
-        margin: 24px 0;
+        margin-bottom: 24px;
+    }
+    &__history {
+        padding: 0;
+        margin: 0;
+    }
+    &__history-list-item {
+        list-style: none;
+        display: flex;
+        border-bottom: 1px solid $mercury;
+    }
+    &__history-right-container {
+        margin: 16px 0;
+        flex-grow: 1;
+    }
+    &__history-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+    }
+    &__history-name {
+        @include subheader;
+        margin: 0px;
+    }
+    &__history-timestamp {
+        @include subheader;
+        color: $silver;
+        font-weight: 400;
+        margin: 0px;
+    }
+    &__history-comment {
+        @include bodycopy;
     }
 }
 

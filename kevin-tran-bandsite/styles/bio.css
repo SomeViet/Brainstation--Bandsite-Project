@@ -194,8 +194,7 @@ h3 {
 }
 @media screen and (min-width: 80rem) {
   .footer__header-text {
-    margin: 3rem 2.25rem 0 0;
-    min-width: 14.8125rem;
+    margin: 3rem 0 0 0;
   }
 }
 @media screen and (min-width: 48rem) {
@@ -656,17 +655,19 @@ h3 {
 }
 .comments__form {
   display: flex;
+  border-bottom: 1px solid #e1e1e1;
 }
-.comments__container {
+.comments__input-container {
   flex-grow: 1;
 }
 .comments__avatar {
-  border-radius: 50%;
+  background-color: #e1e1e1;
+  border-radius: 50%/50%;
   width: 36px;
   height: 36px;
   -o-object-fit: cover;
      object-fit: cover;
-  margin-right: 16px;
+  margin: 24px 16px 16px 0;
 }
 @media screen and (min-width: 48rem) {
   .comments__avatar {
@@ -680,6 +681,7 @@ h3 {
   font-weight: 700;
   font-weight: 400;
   color: #afafaf;
+  margin-bottom: 4px;
 }
 @media screen and (min-width: 48rem) {
   .comments__name-label {
@@ -689,18 +691,40 @@ h3 {
   }
 }
 .comments__name-input {
+  @font-family : "Avenir";
   background-color: #fafafa;
+  color: #323232;
   min-height: 36px;
   border-radius: 4px;
-  padding: 0 12px;
+  padding: 12px;
   box-sizing: border-box;
   width: 100%;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 16px;
 }
 @media screen and (min-width: 48rem) {
   .comments__name-input {
     min-height: 48px;
-    padding: 0 16px;
+    padding: 16px;
   }
+}
+.comments__name-input::-moz-placeholder {
+  color: #323232;
+  opacity: 1;
+}
+.comments__name-input:-ms-input-placeholder {
+  color: #323232;
+  opacity: 1;
+}
+.comments__name-input::placeholder {
+  color: #323232;
+  opacity: 1;
+}
+.comments__name-input:active {
+  border: 1px solid #323232;
+}
+.comments__name-input:invalid {
+  border: 1px solid #d22d2d;
 }
 .comments__comment-label {
   font-size: 10px;
@@ -708,6 +732,7 @@ h3 {
   font-weight: 700;
   font-weight: 400;
   color: #afafaf;
+  margin-bottom: 4px;
 }
 @media screen and (min-width: 48rem) {
   .comments__comment-label {
@@ -717,18 +742,40 @@ h3 {
   }
 }
 .comments__comment-input {
+  font-family: "Avenir";
   background-color: #fafafa;
   min-height: 36px;
   border-radius: 4px;
-  padding: 0 12px;
+  padding: 12px;
   box-sizing: border-box;
   width: 100%;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 16px;
+  resize: none;
 }
 @media screen and (min-width: 48rem) {
   .comments__comment-input {
     min-height: 48px;
-    padding: 0 16px;
+    padding: 16px;
   }
+}
+.comments__comment-input::-moz-placeholder {
+  color: #323232;
+  opacity: 1;
+}
+.comments__comment-input:-ms-input-placeholder {
+  color: #323232;
+  opacity: 1;
+}
+.comments__comment-input::placeholder {
+  color: #323232;
+  opacity: 1;
+}
+.comments__comment-input:active {
+  border: 1px solid #323232;
+}
+.comments__comment-input:invalid {
+  border: 1px solid #d22d2d;
 }
 .comments__submit-button {
   background-color: #323232;
@@ -739,7 +786,68 @@ h3 {
   display: block;
   border: 0px;
   border-radius: 4px;
-  margin: 24px 0;
+  margin-bottom: 24px;
+}
+.comments__history {
+  padding: 0;
+  margin: 0;
+}
+.comments__history-list-item {
+  list-style: none;
+  display: flex;
+  border-bottom: 1px solid #e1e1e1;
+}
+.comments__history-right-container {
+  margin: 16px 0;
+  flex-grow: 1;
+}
+.comments__history-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.comments__history-name {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  color: #323232;
+  margin: 0px;
+}
+@media screen and (min-width: 48rem) {
+  .comments__history-name {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+  }
+}
+.comments__history-timestamp {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  color: #323232;
+  color: #afafaf;
+  font-weight: 400;
+  margin: 0px;
+}
+@media screen and (min-width: 48rem) {
+  .comments__history-timestamp {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+  }
+}
+.comments__history-comment {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #323232;
+}
+@media screen and (min-width: 48rem) {
+  .comments__history-comment {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+  }
 }
 
 .comment-red {
