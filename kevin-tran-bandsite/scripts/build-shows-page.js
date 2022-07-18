@@ -57,7 +57,7 @@ let structureSetup = () => {
     subheaderDate.classList.add("upcoming__subheader");
     subheaderVenue.classList.add("upcoming__subheader");
     subheaderLocation.classList.add("upcoming__subheader");
-    subheaderBuyTicket.classList.add("upcoming__subheader");
+    subheaderBuyTicket.classList.add("upcoming__subheader-ticket");
 
     // Piecing it together
     subheaderContainer.appendChild(subheaderDate);
@@ -73,7 +73,7 @@ let structureSetup = () => {
 let upcomingShows = () => {
     for (let i = 0; i < showsHistory.length; i++) {
         // Set-up Tags
-        let paste = document.querySelector(".upcoming");
+        let paste = document.querySelector(".upcoming__shows");
         let eventSetup = document.createElement("ul");
         let subheaderDate = document.createElement("div");
         let subheaderVenue = document.createElement("div");

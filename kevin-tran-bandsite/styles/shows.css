@@ -35,6 +35,11 @@ button {
   font-size: 1em;
 }
 
+ul {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+}
+
 .header {
   background-color: #323232;
 }
@@ -515,6 +520,7 @@ button {
 }
 @media screen and (min-width: 80rem) {
   .hero__shows-subtext {
+    margin: 0 0 16px 0;
     padding: 0;
     display: inline-flex;
     width: auto;
@@ -547,7 +553,7 @@ button {
 @media screen and (min-width: 80rem) {
   .hero__iframe {
     margin: 0;
-    width: 25%;
+    width: 45%;
   }
 }
 
@@ -555,6 +561,8 @@ button {
   padding: 0 1rem;
   display: flex;
   flex-direction: column;
+  width: auto;
+  margin-bottom: 16px;
 }
 @media screen and (min-width: 48rem) {
   .upcoming {
@@ -568,12 +576,17 @@ button {
     margin: auto;
   }
 }
+@media screen and (min-width: 80rem) {
+  .upcoming {
+    flex-direction: row;
+  }
+}
 .upcoming__header {
   font-size: 24px;
   line-height: 32px;
   font-weight: 600;
   color: #323232;
-  margin: 24px 0 16px 0;
+  margin: 24px 0 0 0;
 }
 @media screen and (min-width: 48rem) {
   .upcoming__header {
@@ -583,43 +596,81 @@ button {
   }
 }
 @media screen and (min-width: 48rem) {
+  .upcoming__header {
+    margin-top: 48px;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .upcoming__header {
+    margin: 48px 0 36px 0;
+    padding-right: 111px;
+  }
+}
+.upcoming__shows {
+  flex-grow: 1;
+}
+@media screen and (min-width: 48rem) {
+  .upcoming__shows {
+    margin-bottom: 36px;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .upcoming__shows {
+    margin: 48px 0 36px 0;
+  }
+}
+@media screen and (min-width: 48rem) {
   .upcoming__container-subheader {
+    padding: 16px;
     display: flex;
     justify-content: space-between;
   }
 }
 .upcoming__subheader {
+  font-size: 10px;
+  line-height: 20px;
+  font-weight: 700;
   display: none;
 }
 @media screen and (min-width: 48rem) {
-  .upcoming__subheader {
-    font-size: 10px;
-    line-height: 20px;
-    font-weight: 700;
-    color: #afafaf;
-    font-weight: 600;
-    display: block;
-    width: 20vw;
-  }
-}
-@media screen and (min-width: 48rem) and (min-width: 48rem) {
   .upcoming__subheader {
     font-size: 12px;
     line-height: 20px;
     font-weight: 700;
   }
 }
+@media screen and (min-width: 48rem) {
+  .upcoming__subheader {
+    color: #afafaf;
+    font-weight: 600;
+    display: block;
+    width: 20%;
+  }
+  .upcoming__subheader-ticket {
+    min-width: 150px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
 .upcoming__items {
   border-bottom: 1px solid #e1e1e1;
-  margin-bottom: 16px;
-  padding: 0;
+  margin-bottom: 0;
+  padding: 16px 0;
 }
 @media screen and (min-width: 48rem) {
   .upcoming__items {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 24px 18px;
   }
+}
+.upcoming__items:hover {
+  background-color: #fafafa;
+}
+.upcoming__items :active {
+  background-color: #e1e1e1;
 }
 .upcoming__mobile-subheader {
   font-size: 10px;
@@ -646,7 +697,6 @@ button {
   font-weight: 400;
   color: #323232;
   font-weight: 600;
-  margin-bottom: 8px;
   list-style: none;
 }
 @media screen and (min-width: 48rem) {
@@ -658,7 +708,8 @@ button {
 }
 @media screen and (min-width: 48rem) {
   .upcoming__date {
-    width: 20vw;
+    width: 20%;
+    font-weight: 600;
   }
 }
 .upcoming__venue {
@@ -666,7 +717,6 @@ button {
   line-height: 18px;
   font-weight: 400;
   color: #323232;
-  margin-bottom: 8px;
   list-style: none;
 }
 @media screen and (min-width: 48rem) {
@@ -678,7 +728,7 @@ button {
 }
 @media screen and (min-width: 48rem) {
   .upcoming__venue {
-    width: 20vw;
+    width: 20%;
   }
 }
 .upcoming__location {
@@ -686,7 +736,6 @@ button {
   line-height: 18px;
   font-weight: 400;
   color: #323232;
-  margin-bottom: 8px;
   list-style: none;
 }
 @media screen and (min-width: 48rem) {
@@ -698,33 +747,26 @@ button {
 }
 @media screen and (min-width: 48rem) {
   .upcoming__location {
-    width: 20vw;
+    width: 20%;
   }
 }
 .upcoming__buy-ticket {
   font-size: 10px;
   line-height: 20px;
   font-weight: 700;
+  margin-top: 16px;
   font-size: 16px;
   font-weight: 600;
   line-height: 0;
   background-color: #323232;
   color: #ffffff;
   height: 40px;
-  min-width: 150px;
+  box-sizing: border-box;
   padding: 0px 32px;
   display: block;
   border: 0px;
   border-radius: 4px;
-  margin-bottom: 24px;
   width: 100%;
-}
-@media screen and (min-width: 48rem) {
-  .upcoming__buy-ticket {
-    width: 200px;
-    float: right;
-    margin-bottom: 16px;
-  }
 }
 @media screen and (min-width: 48rem) {
   .upcoming__buy-ticket {
@@ -732,4 +774,17 @@ button {
     line-height: 20px;
     font-weight: 700;
   }
+}
+@media screen and (min-width: 48rem) {
+  .upcoming__buy-ticket {
+    margin-top: 0px;
+    min-width: 150px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    float: right;
+  }
+}
+.upcoming__buy-ticket:hover {
+  background-color: #000000;
 }/*# sourceMappingURL=shows.css.map */

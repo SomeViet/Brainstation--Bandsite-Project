@@ -141,10 +141,15 @@
 
 .comments {
     @include page-sidemargins;
+    margin-bottom: 16px;
+    @include tablet {
+        margin-bottom: 36px;
+    }
     &__header {
         @include tablet {
             margin: 3rem 0 2.25rem 0;
         }
+
         margin: 1.5rem 0 1rem 0rem;
         @include sectionheader;
     }
@@ -152,6 +157,14 @@
     &__form {
         display: flex;
         border-bottom: 1px solid $mercury;
+        @include tablet {
+            margin-left: 72px;
+            margin-right: 72px;
+        }
+        @include desktop {
+            margin-left: 261px;
+            margin-right: 261px;
+        }
     }
 
     &__input-container {
@@ -258,11 +271,22 @@
         border-radius: 4px;
         margin-bottom: 24px;
         width: 100%;
+        &:hover {
+            background-color: $bandsite-darkblack;
+        }
     }
 
     &__history {
         padding: 0;
         margin: 0;
+        @include tablet {
+            margin-left: 72px;
+            margin-right: 72px;
+        }
+        @include desktop {
+            margin-left: 261px;
+            margin-right: 261px;
+        }
 
         &-list-item {
             list-style: none;
@@ -284,6 +308,10 @@
         &-name {
             @include subheader;
             margin: 0px;
+            @include tablet {
+                font-weight: 600;
+                font-size: 14px;
+            }
         }
 
         &-timestamp {
@@ -291,6 +319,10 @@
             color: $silver;
             font-weight: 400;
             margin: 0px;
+            @include tablet {
+                font-weight: 400;
+                font-size: 14px;
+            }
         }
 
         &-comment {

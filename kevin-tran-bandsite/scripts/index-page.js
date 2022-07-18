@@ -7,15 +7,22 @@ let commentHistory = [
         // avatarSource: "",
     },
     {
-        userName: "Kevin Tran",
+        userName: "Emilie Beach",
         comment:
             "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-        dateHistory: "01/01/19",
+        dateHistory: "01/01/2019",
+        // avatarSource: "",
+    },
+    {
+        userName: "Connor Walton",
+        comment:
+            "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
+        dateHistory: "02/17/2021",
         // avatarSource: "",
     },
 ];
 
-let historyUpdate = () => {
+let displayComment = () => {
     for (let i = commentHistory.length - 1; i >= 0; i--) {
         // Set-up Tags for Loop
         let paste = document.querySelector(".comments__history");
@@ -41,7 +48,8 @@ let historyUpdate = () => {
         // Avatar Setup
         avatarSetup.innerText = commentHistory[i].avatarSource;
         avatarSetup.classList.add("comments__avatar");
-        avatarSetup.setAttribute("src", "");
+        avatarSetup.setAttribute("src", "#");
+        // avatarSetup.setAttribute("alt", " ");
 
         // Structure Setup
         let divHeader = document.createElement("div");
@@ -66,7 +74,7 @@ let clearHistory = () => {
     reset.innerHTML = "";
 };
 
-historyUpdate();
+displayComment();
 
 const form = document.querySelector(".comments__form");
 form.addEventListener("submit", function (convo) {
@@ -78,10 +86,10 @@ form.addEventListener("submit", function (convo) {
         comment: convo.target.user_comment.value,
         dateHistory: dateNow.toLocaleDateString(),
         // not applicable for sprint 2
-        avatarSource: "",
+        // avatarSource: "",
     });
     console.log(commentHistory);
     clearHistory();
-    historyUpdate();
+    displayComment();
     commentClear.value = "";
 });

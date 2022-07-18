@@ -36,6 +36,9 @@ button {
     font-family: inherit;
     font-size: 1em;
 }
+ul {
+    margin-block-start: 0;
+}
 // Spacing
 
 @mixin page-sidemargins {

@@ -35,6 +35,11 @@ button {
   font-size: 1em;
 }
 
+ul {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+}
+
 .header {
   background-color: #323232;
 }
@@ -515,6 +520,7 @@ button {
 }
 @media screen and (min-width: 80rem) {
   .hero__shows-subtext {
+    margin: 0 0 16px 0;
     padding: 0;
     display: inline-flex;
     width: auto;
@@ -547,7 +553,7 @@ button {
 @media screen and (min-width: 80rem) {
   .hero__iframe {
     margin: 0;
-    width: 25%;
+    width: 45%;
   }
 }
 
@@ -778,6 +784,7 @@ button {
 
 .comments {
   padding: 0 1rem;
+  margin-bottom: 16px;
 }
 @media screen and (min-width: 48rem) {
   .comments {
@@ -789,6 +796,11 @@ button {
     padding: 0;
     width: 66.25rem;
     margin: auto;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .comments {
+    margin-bottom: 36px;
   }
 }
 .comments__header {
@@ -813,6 +825,18 @@ button {
 .comments__form {
   display: flex;
   border-bottom: 1px solid #e1e1e1;
+}
+@media screen and (min-width: 48rem) {
+  .comments__form {
+    margin-left: 72px;
+    margin-right: 72px;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .comments__form {
+    margin-left: 261px;
+    margin-right: 261px;
+  }
 }
 .comments__input-container {
   flex-grow: 1;
@@ -965,9 +989,24 @@ button {
     font-weight: 700;
   }
 }
+.comments__submit-button:hover {
+  background-color: #000000;
+}
 .comments__history {
   padding: 0;
   margin: 0;
+}
+@media screen and (min-width: 48rem) {
+  .comments__history {
+    margin-left: 72px;
+    margin-right: 72px;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .comments__history {
+    margin-left: 261px;
+    margin-right: 261px;
+  }
 }
 .comments__history-list-item {
   list-style: none;
@@ -997,6 +1036,12 @@ button {
     font-weight: 600;
   }
 }
+@media screen and (min-width: 48rem) {
+  .comments__history-name {
+    font-weight: 600;
+    font-size: 14px;
+  }
+}
 .comments__history-timestamp {
   font-size: 14px;
   line-height: 22px;
@@ -1011,6 +1056,12 @@ button {
     font-size: 24px;
     line-height: 32px;
     font-weight: 600;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .comments__history-timestamp {
+    font-weight: 400;
+    font-size: 14px;
   }
 }
 .comments__history-comment {

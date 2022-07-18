@@ -10,41 +10,69 @@
     @include page-sidemargins;
     display: flex;
     flex-direction: column;
+    width: auto;
+    margin-bottom: 16px;
+    @include desktop {
+        flex-direction: row;
+    }
 
     &__header {
         @include pageheader;
-
-        margin: 24px 0 16px 0;
+        margin: 24px 0 0 0;
+        @include tablet {
+            margin-top: 48px;
+        }
+        @include desktop {
+            margin: 48px 0 36px 0;
+            padding-right: 111px;
+        }
     }
     &__shows {
+        flex-grow: 1;
+        @include tablet {
+            margin-bottom: 36px;
+        }
+        @include desktop {
+            margin: 48px 0 36px 0;
+        }
     }
-
     &__container-subheader {
         @include tablet {
+            padding: 16px;
             display: flex;
             justify-content: space-between;
         }
     }
     &__subheader {
+        @include labelbutton;
         display: none;
         @include tablet {
-            @include labelbutton;
             color: $silver;
             font-weight: 600;
             display: block;
-            width: 20vw;
+            width: 20%;
+            &-ticket {
+                min-width: 150px;
+                width: fit-content;
+            }
         }
     }
     &__items {
         @include tablet {
             display: flex;
             align-items: center;
-
             justify-content: space-between;
+            padding: 24px 18px;
         }
         border-bottom: 1px solid $mercury;
-        margin-bottom: 16px;
-        padding: 0;
+        margin-bottom: 0;
+        padding: 16px 0;
+        &:hover {
+            background-color: $alabaster;
+        }
+        :active {
+            background-color: $mercury;
+        }
     }
     &__mobile-subheader {
         @include labelbutton;
@@ -57,49 +85,50 @@
     &__date {
         @include bodycopy;
         font-weight: 600;
-        margin-bottom: 8px;
-
         list-style: none;
         @include tablet {
-            width: 20vw;
+            width: 20%;
+            font-weight: 600;
         }
     }
     &__venue {
         @include bodycopy;
-        margin-bottom: 8px;
         list-style: none;
         @include tablet {
-            width: 20vw;
+            width: 20%;
         }
     }
     &__location {
         @include bodycopy;
-        margin-bottom: 8px;
         list-style: none;
         @include tablet {
-            width: 20vw;
+            width: 20%;
         }
     }
 
     &__buy-ticket {
-        @include tablet {
-            width: 200px;
-            float: right;
-            margin-bottom: 16px;
-        }
         @include labelbutton;
+        margin-top: 16px;
         font-size: 16px;
         font-weight: 600;
         line-height: 0;
         background-color: $bandsite-black;
         color: $white;
         height: 40px;
-        min-width: 150px;
+        box-sizing: border-box;
         padding: 0px 32px;
         display: block;
         border: 0px;
         border-radius: 4px;
-        margin-bottom: 24px;
         width: 100%;
+        @include tablet {
+            margin-top: 0px;
+            min-width: 150px;
+            width: fit-content;
+            float: right;
+        }
+        &:hover {
+            background-color: $bandsite-darkblack;
+        }
     }
 }
