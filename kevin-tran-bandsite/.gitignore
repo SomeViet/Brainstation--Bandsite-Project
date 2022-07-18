@@ -1,2 +1,3 @@
 #ignore scss map files
-*.css.map
+*bio.css.map
+*shows.css.map
