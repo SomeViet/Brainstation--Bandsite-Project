@@ -5,3 +5,101 @@
 @use "./partials/header" as *;
 @use "./partials/footer" as *;
 @use "./partials/hero" as *;
+
+.upcoming {
+    @include page-sidemargins;
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+        @include pageheader;
+
+        margin: 24px 0 16px 0;
+    }
+    &__shows {
+    }
+
+    &__container-subheader {
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &__subheader {
+        display: none;
+        @include tablet {
+            @include labelbutton;
+            color: $silver;
+            font-weight: 600;
+            display: block;
+            width: 20vw;
+        }
+    }
+    &__items {
+        @include tablet {
+            display: flex;
+            align-items: center;
+
+            justify-content: space-between;
+        }
+        border-bottom: 1px solid $mercury;
+        margin-bottom: 16px;
+        padding: 0;
+    }
+    &__mobile-subheader {
+        @include labelbutton;
+        color: $silver;
+        font-weight: 600;
+        @include tablet {
+            display: none;
+        }
+    }
+    &__date {
+        @include bodycopy;
+        font-weight: 600;
+        margin-bottom: 8px;
+
+        list-style: none;
+        @include tablet {
+            width: 20vw;
+        }
+    }
+    &__venue {
+        @include bodycopy;
+        margin-bottom: 8px;
+        list-style: none;
+        @include tablet {
+            width: 20vw;
+        }
+    }
+    &__location {
+        @include bodycopy;
+        margin-bottom: 8px;
+        list-style: none;
+        @include tablet {
+            width: 20vw;
+        }
+    }
+
+    &__buy-ticket {
+        @include tablet {
+            width: 200px;
+            float: right;
+            margin-bottom: 16px;
+        }
+        @include labelbutton;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 0;
+        background-color: $bandsite-black;
+        color: $white;
+        height: 40px;
+        min-width: 150px;
+        padding: 0px 32px;
+        display: block;
+        border: 0px;
+        border-radius: 4px;
+        margin-bottom: 24px;
+        width: 100%;
+    }
+}

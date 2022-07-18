@@ -30,6 +30,11 @@ h3 {
   margin: 0;
 }
 
+button {
+  font-family: inherit;
+  font-size: 1em;
+}
+
 .header {
   background-color: #323232;
 }
@@ -543,5 +548,188 @@ h3 {
   .hero__iframe {
     margin: 0;
     width: 25%;
+  }
+}
+
+.upcoming {
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 48rem) {
+  .upcoming {
+    padding: 0 2.25rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .upcoming {
+    padding: 0;
+    width: 66.25rem;
+    margin: auto;
+  }
+}
+.upcoming__header {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  color: #323232;
+  margin: 24px 0 16px 0;
+}
+@media screen and (min-width: 48rem) {
+  .upcoming__header {
+    font-size: 60px;
+    line-height: 68px;
+    font-weight: 600;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .upcoming__container-subheader {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.upcoming__subheader {
+  display: none;
+}
+@media screen and (min-width: 48rem) {
+  .upcoming__subheader {
+    font-size: 10px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #afafaf;
+    font-weight: 600;
+    display: block;
+    width: 20vw;
+  }
+}
+@media screen and (min-width: 48rem) and (min-width: 48rem) {
+  .upcoming__subheader {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 700;
+  }
+}
+.upcoming__items {
+  border-bottom: 1px solid #e1e1e1;
+  margin-bottom: 16px;
+  padding: 0;
+}
+@media screen and (min-width: 48rem) {
+  .upcoming__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.upcoming__mobile-subheader {
+  font-size: 10px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #afafaf;
+  font-weight: 600;
+}
+@media screen and (min-width: 48rem) {
+  .upcoming__mobile-subheader {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 700;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .upcoming__mobile-subheader {
+    display: none;
+  }
+}
+.upcoming__date {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #323232;
+  font-weight: 600;
+  margin-bottom: 8px;
+  list-style: none;
+}
+@media screen and (min-width: 48rem) {
+  .upcoming__date {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .upcoming__date {
+    width: 20vw;
+  }
+}
+.upcoming__venue {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #323232;
+  margin-bottom: 8px;
+  list-style: none;
+}
+@media screen and (min-width: 48rem) {
+  .upcoming__venue {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .upcoming__venue {
+    width: 20vw;
+  }
+}
+.upcoming__location {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #323232;
+  margin-bottom: 8px;
+  list-style: none;
+}
+@media screen and (min-width: 48rem) {
+  .upcoming__location {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .upcoming__location {
+    width: 20vw;
+  }
+}
+.upcoming__buy-ticket {
+  font-size: 10px;
+  line-height: 20px;
+  font-weight: 700;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 0;
+  background-color: #323232;
+  color: #ffffff;
+  height: 40px;
+  min-width: 150px;
+  padding: 0px 32px;
+  display: block;
+  border: 0px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  width: 100%;
+}
+@media screen and (min-width: 48rem) {
+  .upcoming__buy-ticket {
+    width: 200px;
+    float: right;
+    margin-bottom: 16px;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .upcoming__buy-ticket {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 700;
   }
 }/*# sourceMappingURL=shows.css.map */

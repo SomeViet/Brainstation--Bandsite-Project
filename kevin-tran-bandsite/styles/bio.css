@@ -30,6 +30,11 @@ h3 {
   margin: 0;
 }
 
+button {
+  font-family: inherit;
+  font-size: 1em;
+}
+
 .header {
   background-color: #323232;
 }
@@ -930,6 +935,12 @@ h3 {
   border: 1px solid #d22d2d;
 }
 .comments__submit-button {
+  font-size: 10px;
+  line-height: 20px;
+  font-weight: 700;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 0;
   background-color: #323232;
   color: #ffffff;
   height: 40px;
@@ -945,6 +956,13 @@ h3 {
   .comments__submit-button {
     width: 200px;
     float: right;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .comments__submit-button {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 700;
   }
 }
 .comments__history {

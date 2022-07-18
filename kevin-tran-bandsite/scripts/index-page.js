@@ -61,7 +61,7 @@ let historyUpdate = () => {
     }
 };
 
-let clear = () => {
+let clearHistory = () => {
     let reset = document.querySelector(".comments__history");
     reset.innerHTML = "";
 };
@@ -81,7 +81,7 @@ form.addEventListener("submit", function (convo) {
         avatarSource: "",
     });
     console.log(commentHistory);
-    clear();
+    clearHistory();
     historyUpdate();
     commentClear.value = "";
 });

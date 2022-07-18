@@ -244,6 +244,10 @@
             width: 200px;
             float: right;
         }
+        @include labelbutton;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 0;
         background-color: $bandsite-black;
         color: $white;
         height: 40px;
