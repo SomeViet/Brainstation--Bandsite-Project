@@ -1,26 +1,20 @@
-let commentHistory = [
-    {
-        userName: "Miles Acosta",
-        comment:
-            "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-        dateHistory: "12/20/2020",
-        // avatarSource: "",
-    },
-    {
-        userName: "Emilie Beach",
-        comment:
-            "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-        dateHistory: "01/01/2019",
-        // avatarSource: "",
-    },
-    {
-        userName: "Connor Walton",
-        comment:
-            "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-        dateHistory: "02/17/2021",
-        // avatarSource: "",
-    },
-];
+let apiKey = "?api_key=0513fbe4-38a5-46c5-b22c-03b4c959c081";
+
+let commentHistory = [];
+
+axios
+    .get("https://project-1-api.herokuapp.com/comments" + apiKey)
+    .then((result) => {
+        console.log(result.data);
+        for (let i = 0; i < result.data.length; i++) {
+            commentHistory.push(result.data[i]);
+        }
+    })
+    .then(() => {
+        console.log(commentHistory);
+        displayComment();
+    })
+    .catch((error) => console.log(error));
 
 let displayComment = () => {
     for (let i = commentHistory.length - 1; i >= 0; i--) {
@@ -31,10 +25,9 @@ let displayComment = () => {
         let commentSetup = document.createElement("p");
         let avatarSetup = document.createElement("img");
         let list = document.createElement("li");
-        console.log(commentHistory.length);
 
         // New User
-        userSetup.innerText = commentHistory[i].userName;
+        userSetup.innerText = commentHistory[i].name;
         userSetup.classList.add("comments__history-name");
 
         // New Comment
@@ -42,7 +35,14 @@ let displayComment = () => {
         commentSetup.classList.add("comments__history-comment");
 
         // Date Setup
-        dateSetup.innerText = commentHistory[i].dateHistory;
+        let dateFormat = new Date(commentHistory[i].timestamp);
+        dateSetup.innerText =
+            dateFormat.getMonth() +
+            1 +
+            "/" +
+            dateFormat.getDate() +
+            "/" +
+            dateFormat.getFullYear();
         dateSetup.classList.add("comments__history-timestamp");
 
         // Avatar Setup
@@ -74,22 +74,37 @@ let clearHistory = () => {
     reset.innerHTML = "";
 };
 
-displayComment();
-
 const form = document.querySelector(".comments__form");
 form.addEventListener("submit", function (convo) {
     convo.preventDefault();
     let dateNow = new Date();
     let commentClear = document.querySelector(".comments__comment-input");
     commentHistory.push({
-        userName: convo.target.user_name.value,
+        name: convo.target.user_name.value,
         comment: convo.target.user_comment.value,
-        dateHistory: dateNow.toLocaleDateString(),
-        // not applicable for sprint 2
-        // avatarSource: "",
+        timestamp: dateNow.toLocaleDateString(),
     });
     console.log(commentHistory);
     clearHistory();
     displayComment();
+    let apiConfig = { headers: { "content-type": "application/json" } };
+    axios.post(
+        "https://project-1-api.herokuapp.com/comments" + apiKey,
+        {
+            name: convo.target.user_name.value,
+            comment: convo.target.user_comment.value,
+        },
+        apiConfig
+    );
     commentClear.value = "";
 });
+
+// Manually Delete Test Data
+// let reset = () => {
+//     let idDelete = "8a69df13-3578-4214-85e0-7b1d63ad2b50";
+//     axios.delete(
+//         "https://project-1-api.herokuapp.com/comments/" + idDelete + apiKey
+//     );
+// };
+
+// reset();

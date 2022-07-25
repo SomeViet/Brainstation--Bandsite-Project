@@ -1,35 +1,19 @@
-let showsHistory = [
-    {
-        showDate: "Mon Sept 06 2021",
-        showVenue: "Ronald Lane",
-        showLocation: "San Francisco, CA",
-    },
-    {
-        showDate: "Tue Sept 21 2021",
-        showVenue: "Pier 3 East",
-        showLocation: "San Francisco, CA",
-    },
-    {
-        showDate: "Fri Oct 15 2021",
-        showVenue: "View Lounge",
-        showLocation: "San Francisco, CA",
-    },
-    {
-        showDate: "Sat Nov 06 2021",
-        showVenue: "Hyatt Agency",
-        showLocation: "San Francisco, CA",
-    },
-    {
-        showDate: "Fri Nov 26 2021",
-        showVenue: "Moscow Center",
-        showLocation: "San Francisco, CA",
-    },
-    {
-        showDate: "Wed Dec 15 2021 ",
-        showVenue: "Press Club ",
-        showLocation: "San Francisco, CA",
-    },
-];
+let apiKey = "?api_key=0513fbe4-38a5-46c5-b22c-03b4c959c081";
+
+let showsHistory = [];
+
+axios
+    .get("https://project-1-api.herokuapp.com/showdates" + apiKey)
+    .then((result) => {
+        for (let i = 0; i < result.data.length; i++) {
+            showsHistory.push(result.data[i]);
+        }
+    })
+    .then(() => {
+        console.log(showsHistory);
+        upcomingShows();
+    })
+    .catch((error) => console.log(error));
 
 let structureSetup = () => {
     // Set-up Tags
@@ -88,9 +72,10 @@ let upcomingShows = () => {
         subheaderVenue.innerText = "Venue";
         subheaderLocation.innerText = "Location";
         buyTicket.innerText = "BUY TICKETS";
-        itemDate.innerText = showsHistory[i].showDate;
-        itemVenue.innerText = showsHistory[i].showVenue;
-        itemLocation.innerHTML = showsHistory[i].showLocation;
+        let dateFormat = new Date(Number(showsHistory[i].date));
+        itemDate.innerText = dateFormat.toDateString();
+        itemVenue.innerText = showsHistory[i].place;
+        itemLocation.innerHTML = showsHistory[i].location;
 
         // Class List Setup
         eventSetup.classList.add("upcoming__items");
@@ -117,4 +102,3 @@ let upcomingShows = () => {
 };
 
 structureSetup();
-upcomingShows();
