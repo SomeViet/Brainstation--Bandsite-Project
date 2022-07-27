@@ -148,6 +148,23 @@ ul {
   }
 }
 
+.test1 {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  width: 50%;
+  justify-content: center;
+}
+
+.test2 {
+  text-decoration: none;
+  color: #e1e1e1;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  text-align: center;
+  padding-bottom: 0.75rem;
+  border-bottom: 0.25rem solid transparent;
+}
+
 .footer {
   background-color: #323232;
 }
