@@ -12,6 +12,13 @@ axios
         }
     })
     .then(() => {
+        console.log(commentHistory);
+
+        //sort array by timestamp (oldest to newest)
+        commentHistory.sort(function (a, b) {
+            return a.timestamp - b.timestamp;
+        });
+        console.log(commentHistory);
         displayComment();
     })
     .catch((error) => console.log(error));
@@ -19,6 +26,7 @@ axios
 let displayComment = () => {
     for (let i = commentHistory.length - 1; i >= 0; i--) {
         // Set-up Tags for Loop
+        console.log(commentHistory);
         let paste = document.querySelector(".comments__history");
         let userSetup = document.createElement("h6");
         let dateSetup = document.createElement("h6");
