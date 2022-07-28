@@ -10,7 +10,6 @@ axios
         }
     })
     .then(() => {
-        console.log(showsHistory);
         upcomingShows();
     })
     .catch((error) => console.log(error));

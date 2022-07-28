@@ -1,17 +1,17 @@
 let apiKey = "?api_key=0513fbe4-38a5-46c5-b22c-03b4c959c081";
 
+// load database data.
+
 let commentHistory = [];
 
 axios
     .get("https://project-1-api.herokuapp.com/comments" + apiKey)
     .then((result) => {
-        console.log(result.data);
         for (let i = 0; i < result.data.length; i++) {
             commentHistory.push(result.data[i]);
         }
     })
     .then(() => {
-        console.log(commentHistory);
         displayComment();
     })
     .catch((error) => console.log(error));
@@ -69,24 +69,33 @@ let displayComment = () => {
     }
 };
 
-let clearHistory = () => {
-    let reset = document.querySelector(".comments__history");
-    reset.innerHTML = "";
-};
-
+// comment submitter
 const form = document.querySelector(".comments__form");
 form.addEventListener("submit", function (convo) {
+    // to prevent refresh
     convo.preventDefault();
+
+    // insert comments into comment array on click
     let dateNow = new Date();
+    let nameClear = document.querySelector(".comments__name-input");
     let commentClear = document.querySelector(".comments__comment-input");
     commentHistory.push({
         name: convo.target.user_name.value,
         comment: convo.target.user_comment.value,
         timestamp: dateNow.toLocaleDateString(),
     });
-    console.log(commentHistory);
+
+    // clear comments
+    let clearHistory = () => {
+        let reset = document.querySelector(".comments__history");
+        reset.innerHTML = "";
+    };
     clearHistory();
+
+    // display comment with updated comments
     displayComment();
+
+    // post comments into API
     let apiConfig = { headers: { "content-type": "application/json" } };
     axios.post(
         "https://project-1-api.herokuapp.com/comments" + apiKey,
@@ -96,15 +105,15 @@ form.addEventListener("submit", function (convo) {
         },
         apiConfig
     );
+    nameClear.value = "";
     commentClear.value = "";
 });
 
 // Manually Delete Test Data
 // let reset = () => {
-//     let idDelete = "8a69df13-3578-4214-85e0-7b1d63ad2b50";
+//     let idDelete = "8a69df13-3578-4214-85e0-7b1d63ad2b50"; // enter in data ID to delete
 //     axios.delete(
 //         "https://project-1-api.herokuapp.com/comments/" + idDelete + apiKey
 //     );
 // };
-
 // reset();
