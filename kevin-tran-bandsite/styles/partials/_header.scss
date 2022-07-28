@@ -53,6 +53,9 @@
             justify-content: space-around;
             margin: 0;
             padding: 0;
+            &-container {
+                width: 50%;
+            }
         }
 
         &__link {
@@ -60,7 +63,6 @@
             color: $mercury;
             font-size: 0.875rem;
             line-height: 1.375rem;
-            width: 50%;
             font-weight: 600;
         }
 

@@ -69,14 +69,14 @@
         @include pageheader;
         @include page-sidemargins;
         color: $white;
-        max-width: 240px;
+        max-width: 15rem;
         margin: 0;
         @include tablet {
-            max-width: 608px;
+            max-width: 38rem;
         }
         @include desktop {
             margin: 0;
-            max-width: 480px;
+            max-width: 30rem;
         }
     }
     &__shows-subtext {
@@ -84,12 +84,12 @@
         @include page-sidemargins;
         font-weight: 400;
         color: $white;
-        margin: 16px 0px;
+        margin: 1rem 0;
         @include tablet {
-            margin: 36px 0;
+            margin: 2.25rem 0;
         }
         @include desktop {
-            margin: 0 0 16px 0;
+            margin: 0 0 1rem 0;
             padding: 0;
             display: inline-flex;
             width: auto;
@@ -99,8 +99,8 @@
     &__iframe {
         @include page-sidemargins;
         height: 30%;
-        max-height: 166px;
-        border: 0px;
+        max-height: 10.375rem;
+        border: 0;
         @include tablet {
             align-self: auto;
             width: 65%;
