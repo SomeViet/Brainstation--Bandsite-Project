@@ -1028,6 +1028,21 @@ ul {
     margin-right: 16.3125rem;
   }
 }
+.comments__history-avatar {
+  background-color: #e1e1e1;
+  border-radius: 50%/50%;
+  max-width: 2.25rem;
+  width: 100%;
+  min-height: 2.25rem;
+  height: 100%;
+  margin: 1.5rem 1rem 1rem 0;
+}
+@media screen and (min-width: 48rem) {
+  .comments__history-avatar {
+    max-width: 3rem;
+    min-height: 3rem;
+  }
+}
 .comments__history-list-item {
   list-style: none;
   display: flex;
@@ -1035,7 +1050,7 @@ ul {
 }
 .comments__history-right-container {
   margin: 1rem 0;
-  flex-grow: 1;
+  width: 100%;
 }
 .comments__history-header {
   display: flex;

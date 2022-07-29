@@ -31,7 +31,7 @@ let displayComment = () => {
         let userSetup = document.createElement("h6");
         let dateSetup = document.createElement("h6");
         let commentSetup = document.createElement("p");
-        let avatarSetup = document.createElement("img");
+        let avatarSetup = document.createElement("div");
         let list = document.createElement("li");
 
         // New User
@@ -54,9 +54,7 @@ let displayComment = () => {
         dateSetup.classList.add("comments__history-timestamp");
 
         // Avatar Setup
-        avatarSetup.innerText = commentHistory[i].avatarSource;
-        avatarSetup.classList.add("comments__avatar");
-        avatarSetup.setAttribute("src", "#");
+        avatarSetup.classList.add("comments__history-avatar");
         // avatarSetup.setAttribute("alt", " ");
 
         // Structure Setup

@@ -287,7 +287,19 @@
             margin-left: 16.3125rem;
             margin-right: 16.3125rem;
         }
-
+        &-avatar {
+            @include tablet {
+                max-width: 3rem;
+                min-height: 3rem;
+            }
+            background-color: $mercury;
+            border-radius: 50%/50%;
+            max-width: 2.25rem;
+            width: 100%;
+            min-height: 2.25rem;
+            height: 100%;
+            margin: 1.5rem 1rem 1rem 0;
+        }
         &-list-item {
             list-style: none;
             display: flex;
@@ -296,7 +308,7 @@
 
         &-right-container {
             margin: 1rem 0;
-            flex-grow: 1;
+            width: 100%;
         }
 
         &-header {
